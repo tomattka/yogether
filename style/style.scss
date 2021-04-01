@@ -1,3 +1,8 @@
-header{
-    background-color: lightblue;
+@import "./variables";
+@import "./header";
+
+.contact{
+    @extend header; // inherit header
+    @include flexCenter(row, #cdcdcd);
+    width: 100% - 20%;
 }
