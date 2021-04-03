@@ -1,34 +1,11 @@
-/* Common */
-* {
-    padding: 0;
-    margin: 0;
-}
-a{
-    text-decoration: none;
-}
-
 /* Variables */
 $contentDesktopWidth: 1170px;
 $headerLinksColor: #49497D;
-$buttonBgColor: #7551A8;
-$buttonBgHoverColor: #AB89DB;
+$flatTextColor: #07071F;
 
-/* button */
-.button{
-    border: none;
-    padding: 14px 32px;
-    background: $buttonBgColor;
-    border-radius: 8px;
-    color: white;
-    margin-right: 0px;
-    line-height: 16px;
-    font-size: 14px;
-    cursor: pointer;
-
-    &:hover{
-        background-color: $buttonBgHoverColor;
-    }
-}
+@import "./fonts";
+@import "./common";
+@import "./buttons";
 
 /* header */
 .header{
@@ -46,16 +23,23 @@ $buttonBgHoverColor: #AB89DB;
     a{
         color: $headerLinksColor;
     }
+
+    &__title{
+        margin-top: 110px;
+    }
 }
+/* Menu top line */
 .menu-block{
     height: 61px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
 
     &__logo{        
         margin: 0;
-        flex-basis: 193px;
+        flex-basis: 200px;
         margin-right: 107px;
 
         img{
@@ -72,16 +56,18 @@ $buttonBgHoverColor: #AB89DB;
             height: 61px;
             align-items: center;
         }
+        a:hover{
+            text-decoration: none;
+        }
     }   
     
     &__menu{
         display: flex;
-        flex-basis: 500px;
+        flex-basis: 615px;
         list-style: none;
     }
 
-    &__item{       
-        
+    &__item{        
         display: block;   
         margin-right: 28px;
     }
@@ -89,11 +75,39 @@ $buttonBgHoverColor: #AB89DB;
     &__buttons{
         flex-basis: 250px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-end;        
+        align-items: center;
 
     }
 
     &__register{
         margin-left: 18px;
+    }
+}
+/* Title */
+.title{
+    text-align: center;
+
+    h1{
+        font-size: 44px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: $flatTextColor;
+        margin-bottom: 31px;
+    }
+}
+.breadcrumbs{
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+
+    a::after{
+        content: "";
+        display: inline-block;
+        margin: 0 6px 0px 8px;
+        width: 6px;
+        height: 16px;
+        background: url(../img/header/bc_arrow.svg) no-repeat;
+        background-position: center bottom;
     }
 }

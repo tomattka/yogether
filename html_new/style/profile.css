@@ -1,4 +1,16 @@
-/* Common */
+/* Variables */
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 500;
+  src: url("../fonts/Raleway/static/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 700;
+  src: url("../fonts/Raleway/static/Raleway-Bold.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,8 +20,16 @@ a {
   text-decoration: none;
 }
 
-/* Variables */
-/* button */
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+/* main button */
 .button {
   border: none;
   padding: 14px 32px;
@@ -44,6 +64,11 @@ a {
   color: #49497D;
 }
 
+.header__title {
+  margin-top: 110px;
+}
+
+/* Menu top line */
 .menu-block {
   height: 61px;
   display: -webkit-box;
@@ -55,12 +80,14 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .menu-block__logo {
   margin: 0;
-  -ms-flex-preferred-size: 193px;
-      flex-basis: 193px;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
   margin-right: 107px;
 }
 
@@ -84,12 +111,16 @@ a {
           align-items: center;
 }
 
+.menu-block__logo a:hover {
+  text-decoration: none;
+}
+
 .menu-block__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 500px;
-      flex-basis: 500px;
+  -ms-flex-preferred-size: 615px;
+      flex-basis: 615px;
   list-style: none;
 }
 
@@ -107,9 +138,41 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu-block__register {
   margin-left: 18px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #07071F;
+  margin-bottom: 31px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.breadcrumbs a::after {
+  content: "";
+  display: inline-block;
+  margin: 0 6px 0px 8px;
+  width: 6px;
+  height: 16px;
+  background: url(../img/header/bc_arrow.svg) no-repeat;
+  background-position: center bottom;
 }
 /*# sourceMappingURL=profile.css.map */
