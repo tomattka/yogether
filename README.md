@@ -1,1 +1,1 @@
-# yogether project
+# yogether
