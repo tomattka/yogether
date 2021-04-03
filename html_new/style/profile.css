@@ -1,0 +1,115 @@
+/* Common */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Variables */
+/* button */
+.button {
+  border: none;
+  padding: 14px 32px;
+  background: #7551A8;
+  border-radius: 8px;
+  color: white;
+  margin-right: 0px;
+  line-height: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #AB89DB;
+}
+
+/* header */
+.header {
+  height: 453px;
+  background-image: url("../img/header/mountains_bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.header__wrapper {
+  width: 1170px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.header a {
+  color: #49497D;
+}
+
+.menu-block {
+  height: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-block__logo {
+  margin: 0;
+  -ms-flex-preferred-size: 193px;
+      flex-basis: 193px;
+  margin-right: 107px;
+}
+
+.menu-block__logo img {
+  float: left;
+  margin-right: 9px;
+}
+
+.menu-block__logo figcaption {
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 61px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-block__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 500px;
+      flex-basis: 500px;
+  list-style: none;
+}
+
+.menu-block__item {
+  display: block;
+  margin-right: 28px;
+}
+
+.menu-block__buttons {
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu-block__register {
+  margin-left: 18px;
+}
+/*# sourceMappingURL=profile.css.map */
