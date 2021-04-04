@@ -246,7 +246,7 @@ button {
   text-align: center;
 }
 
-.title h1 {
+.title h1, .title h2 {
   font-size: 44px;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -255,21 +255,21 @@ button {
 }
 
 @media (max-width: 1024px) {
-  .title h1 {
+  .title h1, .title h2 {
     font-size: 36px;
     margin-bottom: 24px;
   }
 }
 
 @media (max-width: 767px) {
-  .title h1 {
+  .title h1, .title h2 {
     font-size: 32px;
     margin-bottom: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .title h1 {
+  .title h1, .title h2 {
     font-size: 24px;
     line-height: 120%;
   }
@@ -295,5 +295,29 @@ button {
   height: 16px;
   background: url(../img/header/bc_arrow.svg) no-repeat;
   background-position: center bottom;
+}
+
+.user-profile__wrapper {
+  width: 1170px;
+  margin: 118px auto 121px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-profile__info {
+  margin-left: 40px;
+}
+
+.user-view {
+  width: 270px;
+}
+
+.user-view__avatar {
+  width: 270px;
+}
+
+.user-view__avatar img {
+  border-radius: 140px;
 }
 /*# sourceMappingURL=profile.css.map */

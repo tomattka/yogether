@@ -1,0 +1,25 @@
+$mainPhotoWidth : 270px;
+
+.user-profile{
+
+    &__wrapper{        
+        width: $contentDesktopWidth;
+        margin: 118px auto 121px auto;
+        display: flex;
+    }
+    &__info{
+        margin-left: 40px;
+    }
+}
+
+.user-view{
+    width: $mainPhotoWidth;
+
+    &__avatar{
+        width: $mainPhotoWidth;
+
+        img{
+            border-radius: 140px;
+        }
+    }
+}
