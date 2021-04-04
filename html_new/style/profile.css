@@ -30,9 +30,11 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   min-width: 320px;
+  font-weight: 500;
 }
 
 a {
+  color: #7551A8;
   text-decoration: none;
 }
 
@@ -40,8 +42,37 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  vertical-align: top;
+}
+
 button {
   outline: none;
+}
+
+h1, h2 {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #07071F;
+}
+
+@media (max-width: 1024px) {
+  h1, h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1, h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 24px;
+  }
 }
 
 /* main button */
@@ -246,31 +277,24 @@ button {
   text-align: center;
 }
 
-.title h1, .title h2 {
-  font-size: 44px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: #07071F;
+.title__h1, .title__h2 {
   margin-bottom: 31px;
 }
 
 @media (max-width: 1024px) {
-  .title h1, .title h2 {
-    font-size: 36px;
+  .title__h1, .title__h2 {
     margin-bottom: 24px;
   }
 }
 
 @media (max-width: 767px) {
-  .title h1, .title h2 {
-    font-size: 32px;
+  .title__h1, .title__h2 {
     margin-bottom: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .title h1, .title h2 {
-    font-size: 24px;
+  .title__h1, .title__h2 {
     line-height: 120%;
   }
 }
@@ -315,9 +339,73 @@ button {
 
 .user-view__avatar {
   width: 270px;
+  margin-bottom: 8px;
 }
 
 .user-view__avatar img {
   border-radius: 140px;
+}
+
+.user-view__prevs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.user-view__prevs img {
+  border-radius: 8px;
+}
+
+.user-view__prevs a {
+  display: block;
+}
+
+.user-view__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user-view__add {
+  width: 210px;
+  font-weight: bold;
+}
+
+.user-view__message {
+  border: 2px solid #B7B7D3;
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.user-info__h1 {
+  margin-bottom: 48px;
+}
+
+.user-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  line-height: 140%;
+}
+
+.user-info__param {
+  min-width: 187px;
+  -ms-flex-preferred-size: 187px;
+      flex-basis: 187px;
+  color: #8A8A9E;
+}
+
+.user-info__value {
+  color: #07071F;
 }
 /*# sourceMappingURL=profile.css.map */

@@ -7,6 +7,7 @@ $mainPhotoWidth : 270px;
         margin: 118px auto 121px auto;
         display: flex;
     }
+
     &__info{
         margin-left: 40px;
     }
@@ -17,9 +18,62 @@ $mainPhotoWidth : 270px;
 
     &__avatar{
         width: $mainPhotoWidth;
+        margin-bottom: 8px;
 
-        img{
-            border-radius: 140px;
-        }
+        img { border-radius: 140px; }
+    }
+
+    &__prevs{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        img { border-radius: 8px; }
+        a { display: block; }
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__add{
+        width: 210px;
+        font-weight: bold;
+    }
+
+    &__message{
+        border: 2px solid #B7B7D3;
+        border-radius: 8px;
+        background-color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+}
+
+
+.user-info{
+    
+    &__h1{ margin-bottom: 48px; }
+
+    &__item{
+        display: flex;
+        margin-bottom: 30px;
+        line-height: 140%;
+    }
+
+    &__param{
+        min-width: 187px;
+        flex-basis: 187px;
+        color: #8A8A9E;
+    }
+
+    &__value{
+        color: $flatTextColor;
+    }
+
+    a{
+
     }
 }
