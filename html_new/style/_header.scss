@@ -16,14 +16,8 @@
     }
 
     &__wrapper{
-        width: $contentDesktopWidth;
-        margin: auto;
-        padding-top: 20px;        
-        @media (max-width: 1200px) {
-            width: 100%;
-            padding-left: 30px;
-            padding-right: 30px;
-        }
+        @include contentWrapper;
+        padding-top: 20px;     
     }
     
     a{ color: $headerLinksColor; }

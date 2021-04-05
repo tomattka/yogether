@@ -1,26 +1,41 @@
 $mainPhotoWidth : 270px;
+$mainPhotoLaptop: 120px;
+$mainPhotoMobile: 60px;
 
 .user-profile{
 
     &__wrapper{        
-        width: $contentDesktopWidth;
+        @include contentWrapper();
         margin: 118px auto 121px auto;
         display: flex;
+        @media (max-width: 1024px)
+        {
+            flex-direction: column;
+        }
+    }
+
+    &__view{
+        @media (max-width: 1024px) { order: 2; }
     }
 
     &__info{
         margin-left: 40px;
+        @media (max-width: 1024px) { 
+            margin-left: 0;
+            order: 1;
+        }
     }
 }
 
 .user-view{
-    width: $mainPhotoWidth;
+    width: $mainPhotoWidth;    
 
     &__avatar{
         width: $mainPhotoWidth;
         margin-bottom: 8px;
+        @media (max-width: 1024px) { display: none; }
 
-        img { border-radius: 140px; }
+        img { border-radius: $mainPhotoWidth / 2; }
     }
 
     &__prevs{
@@ -35,6 +50,7 @@ $mainPhotoWidth : 270px;
     &__buttons{
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1024px) { display: none; }
     }
 
     &__add{
@@ -54,8 +70,42 @@ $mainPhotoWidth : 270px;
 
 
 .user-info{
-    
-    &__h1{ margin-bottom: 48px; }
+    // @media (max-width: 1024px) { @import contentWrapper;}
+
+    &__name{
+        display: flex;
+        align-items: center;
+        margin-bottom: 48px;
+        @media (max-width: 1024px) { margin-bottom: 28px;}
+        @media (max-width: 480px) { margin-bottom: 16px;}
+
+        img{
+            display: none;
+            width: $mainPhotoLaptop;
+            border-radius: $mainPhotoLaptop / 2;
+            margin-right: 32px;
+            @media (max-width: 1024px) { display: block;}
+            @media (max-width: 480px) { 
+                width: $mainPhotoMobile;
+                border-radius: $mainPhotoMobile / 2;
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &__h1{
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
+    }
+
+    &__buttons{
+        display: none;
+
+        @media (max-width: 1024px) {
+            display: flex;
+        }
+    }
 
     &__item{
         display: flex;
@@ -71,9 +121,5 @@ $mainPhotoWidth : 270px;
 
     &__value{
         color: $flatTextColor;
-    }
-
-    a{
-
     }
 }

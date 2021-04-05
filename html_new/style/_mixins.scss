@@ -1,0 +1,20 @@
+@mixin contentWrapper{
+    width: $contentDesktopWidth;
+    margin: auto;
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+// @mixin flexCenteredStreched{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+// @mixin flexCentered{
+//     display: flex;
+//     align-items: center;
+// }

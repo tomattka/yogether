@@ -1,5 +1,7 @@
 $buttonBgColor: #7551A8;
 $buttonBgHoverColor: #AB89DB;
+$buttonEmptyColor: #49497D;
+$buttonEmptyColor: #49497D;
 
 /* main button */
 .button{
@@ -12,8 +14,21 @@ $buttonBgHoverColor: #AB89DB;
     line-height: 16px;
     font-size: 14px;
     cursor: pointer;
+    white-space: nowrap;
 
     &:hover{
         background-color: $buttonBgHoverColor;
+    }
+}
+.button_empty{
+    @extend .button;
+    background: none;
+    border: 2px solid $buttonEmptyColor;
+    color: $buttonEmptyColor;
+    @media (max-width: 480px) { border-width: 1px;}
+
+    &:hover{
+        background-color: $buttonEmptyColor;
+        color: white;
     }
 }
