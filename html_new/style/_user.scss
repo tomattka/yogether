@@ -1,6 +1,12 @@
 $mainPhotoWidth : 270px;
 $mainPhotoLaptop: 120px;
+$mainPhotoLaptopS: 90px;
 $mainPhotoMobile: 60px;
+
+@mixin headersAdjust{
+    @media (max-width: 768px) { font-size: 24px; }
+    @media (max-width: 480px) { font-size: 16px; }
+}
 
 .user-profile{
 
@@ -8,10 +14,9 @@ $mainPhotoMobile: 60px;
         @include contentWrapper();
         margin: 118px auto 121px auto;
         display: flex;
-        @media (max-width: 1024px)
-        {
-            flex-direction: column;
-        }
+        @media (max-width: 1024px) { flex-direction: column; }
+        @media (max-width: 689px) { margin: 75px auto; }
+        @media (max-width: 480px) { margin: 40px auto; }
     }
 
     &__view{
@@ -28,7 +33,16 @@ $mainPhotoMobile: 60px;
 }
 
 .user-view{
-    width: $mainPhotoWidth;    
+    width: $mainPhotoWidth;   
+    @media (max-width: 1024px) { width: 100%; }
+    
+    &__h2{ 
+        display: none;
+        margin-top: 30px;
+        margin-bottom: 16px;
+        @media (max-width: 1024px) { display: block; }        
+        @include headersAdjust();
+    }
 
     &__avatar{
         width: $mainPhotoWidth;
@@ -43,8 +57,14 @@ $mainPhotoMobile: 60px;
         justify-content: space-between;
         margin-bottom: 24px;
 
-        img { border-radius: 8px; }
         a { display: block; }
+        img { border-radius: 8px; }
+
+        
+        @media (max-width: 1024px) { 
+            justify-content: flex-start;
+            a { margin-right: 16px;}
+        }
     }
 
     &__buttons{
@@ -70,7 +90,6 @@ $mainPhotoMobile: 60px;
 
 
 .user-info{
-    // @media (max-width: 1024px) { @import contentWrapper;}
 
     &__name{
         display: flex;
@@ -85,6 +104,11 @@ $mainPhotoMobile: 60px;
             border-radius: $mainPhotoLaptop / 2;
             margin-right: 32px;
             @media (max-width: 1024px) { display: block;}
+            @media (max-width: 768px) { 
+                width: $mainPhotoLaptopS;
+                border-radius: $mainPhotoLaptopS / 2;
+                margin-right: 24px;
+            }
             @media (max-width: 480px) { 
                 width: $mainPhotoMobile;
                 border-radius: $mainPhotoMobile / 2;
@@ -93,10 +117,8 @@ $mainPhotoMobile: 60px;
         }
     }
 
-    &__h1{
-        @media (max-width: 480px) {
-            font-size: 16px;
-        }
+    &__h1{        
+        @include headersAdjust();
     }
 
     &__buttons{
@@ -104,19 +126,40 @@ $mainPhotoMobile: 60px;
 
         @media (max-width: 1024px) {
             display: flex;
+            margin-bottom: 50px;
         }
+        @media (max-width: 480px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__button-left{
+        margin-right: 15px;
+        @media (max-width: 480px) { width: 136px; }
     }
 
     &__item{
         display: flex;
         margin-bottom: 30px;
         line-height: 140%;
+
+        @media (max-width: 480px) {
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 16px;
+        }
+
     }
 
     &__param{
         min-width: 187px;
         flex-basis: 187px;
         color: #8A8A9E;
+        
+        @media (max-width: 480px) {
+            min-width: 152px;
+            flex-basis: 152px;
+        }
     }
 
     &__value{
