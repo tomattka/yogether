@@ -386,7 +386,7 @@ h1, h2 {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-profile__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -407,7 +407,7 @@ h1, h2 {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-profile__view {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -419,7 +419,7 @@ h1, h2 {
   margin-left: 40px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-profile__info {
     margin-left: 0;
     -webkit-box-ordinal-group: 2;
@@ -432,7 +432,7 @@ h1, h2 {
   width: 270px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-view {
     width: 100%;
   }
@@ -444,7 +444,7 @@ h1, h2 {
   margin-bottom: 16px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-view__h2 {
     display: block;
   }
@@ -467,7 +467,7 @@ h1, h2 {
   margin-bottom: 8px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-view__avatar {
     display: none;
   }
@@ -495,7 +495,7 @@ h1, h2 {
   border-radius: 8px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-view__prevs {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -515,7 +515,7 @@ h1, h2 {
           justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-view__buttons {
     display: none;
   }
@@ -544,7 +544,7 @@ h1, h2 {
   margin-bottom: 48px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-info__name {
     margin-bottom: 28px;
   }
@@ -563,14 +563,9 @@ h1, h2 {
   margin-right: 32px;
 }
 
-@media (max-width: 1024px) {
-  .user-info__name img {
-    display: block;
-  }
-}
-
 @media (max-width: 768px) {
   .user-info__name img {
+    display: block;
     width: 90px;
     border-radius: 45px;
     margin-right: 24px;
@@ -601,7 +596,7 @@ h1, h2 {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .user-info__buttons {
     display: -webkit-box;
     display: -ms-flexbox;
