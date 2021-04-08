@@ -8,6 +8,7 @@ body{
     font-size: 16px;
     min-width: 320px;
     font-weight: 500;
+    color: $flatTextColor;
     @media (max-width: 480px) { font-size: 14px; }
 }
 a{
@@ -27,7 +28,6 @@ h1, h2{
     font-size: 44px;
     font-weight: 700;
     letter-spacing: 0.01em;
-    color: $flatTextColor;
 
     @media (max-width: 1024px) { font-size: 36px; }
     @media (max-width: 767px) { font-size: 32px; }
