@@ -2,6 +2,8 @@
 $contentDesktopWidth: 1170px;
 $linksColor: #7551A8;
 $flatTextColor: #07071F;
+$bgLightColor: #FDFBFD;
+$cornerRadius: 8px;
 
 @import "./fonts";
 
@@ -12,3 +14,4 @@ $flatTextColor: #07071F;
 @import "./header";
 @import "./user";
 @import "./footer";
+@import "./forms";
