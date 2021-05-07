@@ -98,7 +98,10 @@ $headerLinksColor: #49497D;
         a { margin-left: 24px; }
     }
 
-    &__register{ margin-left: 18px; }
+    &__register{ 
+        margin-left: 18px;        
+        font-weight: 600; 
+    }
 }
 /* Title */
 .title{
