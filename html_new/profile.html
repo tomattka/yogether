@@ -77,7 +77,7 @@
                     <h1 class="user-info__h1">Ирина Яковлева</h1>
                 </div>
                 <div class="user-info__buttons">
-                    <button class="button user-info__button-left">Добавить в друзья</button>
+                    <button id="bAddFriendMobile" class="button user-info__button-left">Добавить в друзья</button>
                     <button class="button_empty">Написать сообщение</button>
                 </div>
 
@@ -168,10 +168,11 @@
     <!-- Footer end -->
 
     <!-- Popups start -->
-    <div id="darkscreen" class="darkscreen">
 
+    <div id="darkscreen" class="darkscreen"></div>
         
-        <!-- Login start -->
+    <div id="popups" class="popups">
+        <!-- Login form start -->
 
         <div id="login-form" class="login-form">
             <button id="login-form-close" class="x-close login-form__close"><img src="img/forms/close.png" alt="Закрыть"></button>
@@ -179,7 +180,7 @@
             <input type="text" placeholder="Логин" class="login-form__input login-form__input_login">
             <input type="password" placeholder="Пароль" class="login-form__input login-form__input_password">
             <div class="login-form__error">Введено неверное сочетание логин–пароль. Проверьте данные и повторите попытку.</div>
-            <button class="button">Войти</button>
+            <button class="button login-form__button">Войти</button>
             <div class="login-form__links">
                 <a href="#" class="login-form__link">Восстановление пароля</a>
                 <a href="#" class="login-form__link">Регистрация</a>
@@ -193,10 +194,11 @@
                 <button class="login-form__soc-button"><img src="img/footer/google2.png" alt="Google +"></button>
             </div>
         </div>
-        
-        <!-- Login start -->
 
     </div>
+        
+        <!-- Login form end -->
+
     <!-- Popups end -->
 
 </body>

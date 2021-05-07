@@ -887,12 +887,19 @@ h1, h2 {
 }
 
 .darkscreen {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: fixed;
   background-color: rgba(117, 81, 168, 0.5);
   width: 100%;
+  height: 100vh;
+  top: 0;
+}
+
+.popups {
+  display: none;
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
   height: 100vh;
   top: 0;
   -webkit-box-align: center;
@@ -903,7 +910,24 @@ h1, h2 {
           justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .popups {
+    position: absolute;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .popups {
+    padding: 15px;
+  }
+}
+
 .login-form {
+  display: none;
   width: 400px;
   padding: 30px 30px 60px 30px;
   text-align: center;
@@ -911,10 +935,22 @@ h1, h2 {
   border-radius: 8px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .login-form {
-    position: absolute;
-    top: 20vh;
+    top: 10vh;
+  }
+}
+
+@media (max-width: 430px) {
+  .login-form {
+    width: 100%;
+    min-width: 290px;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-form {
+    padding: 30px 15px 45px 15px;
   }
 }
 
@@ -924,6 +960,12 @@ h1, h2 {
   margin-right: -15px;
 }
 
+@media (max-width: 360px) {
+  .login-form__close {
+    margin-right: 0;
+  }
+}
+
 .login-form__title {
   font-weight: 500;
   font-size: 28px;
@@ -931,6 +973,13 @@ h1, h2 {
   color: #000000;
   margin-bottom: 30px;
   margin-top: 15px;
+}
+
+@media (max-width: 360px) {
+  .login-form__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .login-form__input {
@@ -979,6 +1028,19 @@ h1, h2 {
   margin-bottom: 15px;
 }
 
+.login-form__button {
+  width: 160px;
+}
+
+@media (max-width: 480px) {
+  .login-form__button {
+    padding: 14px 32px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+  }
+}
+
 .login-form__links {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -994,6 +1056,13 @@ h1, h2 {
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 15px;
+}
+
+@media (max-width: 360px) {
+  .login-form__title_h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
 }
 
 .login-form__socials {
