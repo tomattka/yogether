@@ -1,4 +1,4 @@
-var mobMenu, popups, darkscreen;
+var mobMenu, loginForm, popups, darkscreen;
 
 $(document).ready(function(){
 
@@ -6,6 +6,7 @@ $(document).ready(function(){
     mobMenu = $("#mobile-menu");
     popups = $("#popups");
     darkscreen = $('#darkscreen');
+    loginForm = $('#login-form');
 
     // --------- Mobile menu ---------- //
     $("#mobile-menu-close").click(closeMenu); // menu x button
@@ -20,7 +21,7 @@ $(document).ready(function(){
     darkscreen.click(closeAll);
     popups.click(closeAll);
     $('#login-form-close').click(closeAll);
-    $('#login-form').click(function(e){
+    loginForm.click(function(e){
         e.stopPropagation();
     });
 
@@ -34,17 +35,18 @@ $(window).resize(moveMenu); // correcting menu position on window resize
 function closeAll(){
     if (mobMenu.is(":visible"))
         closeMenu();
-    else{
-    popups.children().hide();
-    popups.hide();
-    darkscreen.hide();
+    else
+    {
+        popups.children().hide();
+        popups.hide();
+        darkscreen.hide();
     }
 }
 
 function showLoginForm(){
     darkscreen.show();
     popups.css('display','flex');
-    $('#login-form').show();
+    loginForm.show();
     scrollTopMobile();
     return false;
 }
@@ -65,6 +67,7 @@ function scrollTopMobile(){
 
 
 function showMenu(){
+    mobMenu.show();
     darkscreen.show();
     popups.css('display','flex');
     checkMenuHeight();
@@ -77,6 +80,7 @@ function closeMenu(){
     function(){ // menu animate end
         popups.hide();
         darkscreen.hide();
+        mobMenu.hide();
     });
     return false;
 }
