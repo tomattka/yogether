@@ -908,6 +908,7 @@ h1, h2 {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  overflow-x: hidden;
   width: 100%;
   min-width: 320px;
   height: 100vh;
@@ -926,13 +927,12 @@ h1, h2 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-top: 10vh;
   }
 }
 
 @media (max-width: 480px) {
   .popups {
-    padding: 15px;
+    padding: 0px 15px;
   }
 }
 
@@ -1012,7 +1012,14 @@ h1, h2 {
 
 @media (max-width: 768px) {
   .login-form {
+    position: absolute;
     top: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    top: 15px;
   }
 }
 

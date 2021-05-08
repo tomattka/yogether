@@ -14,6 +14,7 @@ $errorMsgColor: #E62E6B;
     display: flex;    
     //display: none;
     position: fixed;
+    overflow-x: hidden;
     width: 100%;
     min-width: 320px;
     height: 100vh;
@@ -23,10 +24,9 @@ $errorMsgColor: #E62E6B;
     @media (max-width: 768px) { 
         position: absolute;
         align-items: flex-start;
-        padding-top: 10vh;
     }
     @media (max-width: 480px) { 
-        padding: 15px;
+        padding: 0px 15px;
     }
 }
 
@@ -107,7 +107,13 @@ $errorMsgColor: #E62E6B;
     background-color: $bgLightColor;
     border-radius: $cornerRadius;
 
-    @media (max-width: 768px) { top: 10vh; }    
+    @media (max-width: 768px) { 
+        position: absolute;
+        top: 10vh;
+    }    
+    @media (max-width: 480px) { 
+        top: 15px;
+    } 
     @media (max-width: 430px) {  
         width: 100%; 
         min-width: 290px;
