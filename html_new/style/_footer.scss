@@ -6,7 +6,7 @@ $footerLinksColor: #49497D;
     font-size: 14px;
     line-height: 100%;
 
-    a{ color: $footerLinksColor; }
+    &__link{ color: $footerLinksColor; }
     
     &__wrapper{
         @include contentWrapper();
@@ -28,19 +28,21 @@ $footerLinksColor: #49497D;
             order: 2;
             margin-right: 0px;
         }
-
-        img{       
-            margin-bottom: 14px;
-        }
-        figcaption{
-            font-family: 'Barlow', sans-serif;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 28px;
-            line-height: 100%;
-        }
-        a:hover{ text-decoration: none; }
     }
+
+    &__logo-img{       
+        margin-bottom: 14px;
+    }
+
+    &__logo-figcaption{
+        font-family: 'Barlow', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 100%;
+    }
+    
+    &__logo-link:hover{ text-decoration: none; }
 
     &__menus{
         flex-basis: 750px;
@@ -51,10 +53,6 @@ $footerLinksColor: #49497D;
             margin-bottom: 24px;
         }
         @media (max-width: 768px) { display: none; }
-
-        a{
-            white-space: nowrap;
-        }
     }
 
     &__menu{
@@ -69,6 +67,7 @@ $footerLinksColor: #49497D;
     &__menu-item{
         display: inline;
         margin-right: 22px;
+        white-space: nowrap;
     }
 
     &__social{

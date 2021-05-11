@@ -18,22 +18,22 @@
             <!-- Menu block start -->
             <div class="menu-block">
                 <figure class="menu-block__logo">
-                    <a href="#"><img src="img/logo.svg" width="70" alt="Yogether"></a>
-                    <figcaption><a href="#">Yogether</a></figcaption>
+                    <a href="#"><img class="menu-block__logo-img" src="img/logo.svg" width="70" alt="Yogether"></a>
+                    <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a></figcaption>
                 </figure>
                 <ul class="menu-block__menu">
-                    <li class="menu-block__item"><a href="#">Главная</a></li>
-                    <li class="menu-block__item"><a href="#">Участники</a></li>
-                    <li class="menu-block__item"><a href="#">О проекте</a></li>
-                    <li class="menu-block__item"><a href="#">Контакты</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Главная</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Участники</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">О проекте</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Контакты</a></li>
                 </ul>
                 <div class="menu-block__buttons">
-                    <a id="aLogin" href="#" class="menu-block__login">Вход</a>
+                    <a id="aLogin" href="#" class="menu-block__login menu-block__link">Вход</a>
                     <button id="bRegister" class="menu-block__register button">Регистрация</button>
                 </div>
                 <div class="menu-block__mobile-buttons">
                     <a id="aLoginMob" href="#"><img src="img/header/login_mobile.png" alt="Вход"></a>
-                    <a id="aMobMenu" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
                 </div>
             </div>
             <!-- Menu block end -->
@@ -42,7 +42,7 @@
             <div class="header__title title">
                 <h2 class="title__h2">Профиль пользователя</h2>
                 <div class="title__breadcrumbs">
-                    <a href="#">Главная</a><span>Профиль пользователя</span>
+                    <a href="#" class="title__link">Главная</a><span>Профиль пользователя</span>
                 </div>
             </div>
             <!-- Title end -->
@@ -57,13 +57,13 @@
         <div class="user-profile__wrapper">
             <div class="user-view user-profile__view">
                 <!-- <div class="user-view__photos"> -->
-                    <div class="user-view__avatar"><a href="#"><img src="img/profile/main-photo.jpg" alt="Ирина Яковлева" /></a></div>                    
+                    <div class="user-view__avatar"><a href="#"><img class="user-view__avatar-img" src="img/profile/main-photo.jpg" alt="Ирина Яковлева" /></a></div>                    
                     <h2 class="user-view__h2">Фотографии пользователя</h2>
                     <div class="user-view__prevs">
-                        <a href="#"><img src="img/profile/prev1.jpg" alt="Ирина Яковлева"></a>
-                        <a href="#"><img src="img/profile/prev2.jpg" alt="Ирина Яковлева"></a>
-                        <a href="#"><img src="img/profile/prev3.jpg" alt="Ирина Яковлева"></a>
-                        <a href="#"><img src="img/profile/prev4.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev1.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev2.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev3.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev4.jpg" alt="Ирина Яковлева"></a>
                     </div>
                 <!-- </div> -->
                 <div class="user-view__buttons">
@@ -73,7 +73,7 @@
             </div>
             <div class="user-info user-profile__info">
                 <div class="user-info__name">
-                    <img src="img/profile/main-photo.jpg" alt="Ирина Яковлева">
+                    <img class="user-info__photo" src="img/profile/main-photo.jpg" alt="Ирина Яковлева">
                     <h1 class="user-info__h1">Ирина Яковлева</h1>
                 </div>
                 <div class="user-info__buttons">
@@ -129,23 +129,23 @@
     <footer class="footer">
         <div class="footer__wrapper">
             <figure class="footer__logo">
-                <a href="#"><img src="img/logo.svg" width="70" alt="Yogether"></a>
-                <figcaption><a href="#">Yogether</a></figcaption>
+                <a href="#"><img class="footer__logo-img" src="img/logo.svg" width="70" alt="Yogether"></a>
+                <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
             </figure>
             <div class="footer__menus">
                 <ul class="footer__menu footer__menu_first">
-                    <li class="footer__menu-item"><a href="#">Главная</a></li>
-                    <li class="footer__menu-item"><a href="#">Участники</a></li>
-                    <li class="footer__menu-item"><a href="#">О проекте</a></li>
-                    <li class="footer__menu-item"><a href="#">Встречи</a></li>
-                    <li class="footer__menu-item"><a href="#">Контакты</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
                 </ul>
                 <ul class="footer__menu">
-                    <li class="footer__menu-item"><a href="#">Расписание</a></li>
-                    <li class="footer__menu-item"><a href="#">Города и страны</a></li>
-                    <li class="footer__menu-item"><a href="#">Встречи YG</a></li>
-                    <li class="footer__menu-item"><a href="#">Карта сайта</a></li>
-                    <li class="footer__menu-item"><a href="#">Наша команда</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Расписание</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Города и страны</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи YG</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Карта сайта</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Наша команда</a></li>
                 </ul>
             </div>
             <div class="footer__social">
@@ -159,8 +159,8 @@
             <div class="footer__desc">Поиск единомышленников для общения и совместных практик для йогов и эзотериков</div>
             <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
             <div class="footer__policy">
-                <a href="#" class="footer__policy-link">Политика конфиденциальности</a>
-                <a href="#" class="footer__policy-link">Политика обработки персональных данных</a>
+                <a href="#" class="footer__link footer__policy-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link footer__policy-link">Политика обработки персональных данных</a>
             </div>
         </div>
     </footer>

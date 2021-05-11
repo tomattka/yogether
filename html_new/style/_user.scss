@@ -48,24 +48,25 @@ $mainPhotoMobile: 60px;
         width: $mainPhotoWidth;
         margin-bottom: 8px;
         @media (max-width: 768px) { display: none; }
-
-        img { border-radius: $mainPhotoWidth / 2; }
     }
+
+    &__avatar-img { border-radius: $mainPhotoWidth / 2; }
 
     &__prevs{
         display: flex;
         justify-content: space-between;
         margin-bottom: 24px;
-
-        a { display: block; }
-        img { border-radius: 8px; }
-
         
         @media (max-width: 768px) { 
             justify-content: flex-start;
-            a { margin-right: 16px;}
         }
     }
+    &__prevs-link { 
+        display: block; 
+        @media (max-width: 768px) { margin-right: 16px;}
+    }
+    
+    &__prevs-img { border-radius: 8px; }
 
     &__buttons{
         display: flex;
@@ -96,23 +97,23 @@ $mainPhotoMobile: 60px;
         margin-bottom: 48px;
         @media (max-width: 768px) { margin-bottom: 28px;}
         @media (max-width: 480px) { margin-bottom: 16px;}
+    }
 
-        img{
-            display: none;
-            width: $mainPhotoLaptop;
-            border-radius: $mainPhotoLaptop / 2;
-            margin-right: 32px;
-            @media (max-width: 768px) { 
-                display: block;
-                width: $mainPhotoLaptopS;
-                border-radius: $mainPhotoLaptopS / 2;
-                margin-right: 24px;
-            }
-            @media (max-width: 480px) { 
-                width: $mainPhotoMobile;
-                border-radius: $mainPhotoMobile / 2;
-                margin-right: 16px;
-            }
+    &__photo{
+        display: none;
+        width: $mainPhotoLaptop;
+        border-radius: $mainPhotoLaptop / 2;
+        margin-right: 32px;
+        @media (max-width: 768px) { 
+            display: block;
+            width: $mainPhotoLaptopS;
+            border-radius: $mainPhotoLaptopS / 2;
+            margin-right: 24px;
+        }
+        @media (max-width: 480px) { 
+            width: $mainPhotoMobile;
+            border-radius: $mainPhotoMobile / 2;
+            margin-right: 16px;
         }
     }
 
@@ -161,7 +162,4 @@ $mainPhotoMobile: 60px;
         }
     }
 
-    // &__value{
-    //     color: $flatTextColor;
-    // }
 }
