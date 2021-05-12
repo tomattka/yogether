@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Yogether</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="style/profile.css">
+    <link rel="stylesheet" type="text/css" href="src/profile.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
-    <script src="script/jquery-3.6.0.min.js"></script>
-    <script src="script/popups.js"></script>
+    <script src="src/common/jquery-3.6.0.min.js"></script>
+    <script src="src/popups/popups.js"></script>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
             <!-- Menu block start -->
             <div class="menu-block">
                 <figure class="menu-block__logo">
-                    <a href="#"><img class="menu-block__logo-img" src="img/logo.svg" width="70" alt="Yogether"></a>
+                    <a href="#"><img class="menu-block__logo-img" src="src/header/img/logo.svg" width="70" alt="Yogether"></a>
                     <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a></figcaption>
                 </figure>
                 <ul class="menu-block__menu">
@@ -32,8 +32,8 @@
                     <button id="bRegister" class="menu-block__register button">Регистрация</button>
                 </div>
                 <div class="menu-block__mobile-buttons">
-                    <a id="aLoginMob" href="#"><img src="img/header/login_mobile.png" alt="Вход"></a>
-                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+                    <a id="aLoginMob" href="#"><img src="src/header/img/login_mobile.png" alt="Вход"></a>
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="src/header/img/menu_mobile.png" alt="Меню" /></a>
                 </div>
             </div>
             <!-- Menu block end -->
@@ -57,23 +57,23 @@
         <div class="user-profile__wrapper">
             <div class="user-view user-profile__view">
                 <!-- <div class="user-view__photos"> -->
-                    <div class="user-view__avatar"><a href="#"><img class="user-view__avatar-img" src="img/profile/main-photo.jpg" alt="Ирина Яковлева" /></a></div>                    
+                    <div class="user-view__avatar"><a href="#"><img class="user-view__avatar-img" src="src/user-profile/img/main-photo.jpg" alt="Ирина Яковлева" /></a></div>                    
                     <h2 class="user-view__h2">Фотографии пользователя</h2>
                     <div class="user-view__prevs">
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev1.jpg" alt="Ирина Яковлева"></a>
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev2.jpg" alt="Ирина Яковлева"></a>
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev3.jpg" alt="Ирина Яковлева"></a>
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="img/profile/prev4.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="src/user-profile/img/prev1.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="src/user-profile/img/prev2.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="src/user-profile/img/prev3.jpg" alt="Ирина Яковлева"></a>
+                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="src/user-profile/img/prev4.jpg" alt="Ирина Яковлева"></a>
                     </div>
                 <!-- </div> -->
                 <div class="user-view__buttons">
                     <button class="button user-view__add">Добавить в друзья</button>
-                    <button class="user-view__message"><img src="img/profile/message.svg" alt="Написать сообщение"></button>
+                    <button class="user-view__message"><img src="src/user-profile/img/message.svg" alt="Написать сообщение"></button>
                 </div>
             </div>
             <div class="user-info user-profile__info">
                 <div class="user-info__name">
-                    <img class="user-info__photo" src="img/profile/main-photo.jpg" alt="Ирина Яковлева">
+                    <img class="user-info__photo" src="src/user-profile/img/main-photo.jpg" alt="Ирина Яковлева">
                     <h1 class="user-info__h1">Ирина Яковлева</h1>
                 </div>
                 <div class="user-info__buttons">
@@ -129,7 +129,7 @@
     <footer class="footer">
         <div class="footer__wrapper">
             <figure class="footer__logo">
-                <a href="#"><img class="footer__logo-img" src="img/logo.svg" width="70" alt="Yogether"></a>
+                <a href="#"><img class="footer__logo-img" src="src/footer/img/logo.svg" width="70" alt="Yogether"></a>
                 <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
             </figure>
             <div class="footer__menus">
@@ -149,12 +149,12 @@
                 </ul>
             </div>
             <div class="footer__social">
-                <a href="#" class="footer__soc-link"><img src="img/footer/vk.png" alt="Вконтакте"></a>
-                <a href="#" class="footer__soc-link"><img src="img/footer/instagram.png" alt="Инстаграм"></a>
-                <a href="#" class="footer__soc-link"><img src="img/footer/facebook.png" alt="Facebook"></a>
-                <a href="#" class="footer__soc-link"><img src="img/footer/youtube.png" alt="Youtube"></a>
-                <a href="#" class="footer__soc-link"><img src="img/footer/twitter.png" alt="Twitter"></a>
-                <a href="#" class="footer__soc-link"><img src="img/footer/ok.png" alt="Одноклассники"></a>
+                <a href="#" class="footer__soc-link"><img src="src/footer/img/vk.png" alt="Вконтакте"></a>
+                <a href="#" class="footer__soc-link"><img src="src/footer/img/instagram.png" alt="Инстаграм"></a>
+                <a href="#" class="footer__soc-link"><img src="src/footer/img/facebook.png" alt="Facebook"></a>
+                <a href="#" class="footer__soc-link"><img src="src/footer/img/youtube.png" alt="Youtube"></a>
+                <a href="#" class="footer__soc-link"><img src="src/footer/img/twitter.png" alt="Twitter"></a>
+                <a href="#" class="footer__soc-link"><img src="src/footer/img/ok.png" alt="Одноклассники"></a>
             </div>
             <div class="footer__desc">Поиск единомышленников для общения и совместных практик для йогов и эзотериков</div>
             <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
@@ -175,8 +175,7 @@
 
         <!-- Mobile menu start -->
         <div id="mobile-menu" class="mobile-menu">
-            <!-- <div class="x-close"><a href="#" id="x-close-mobmenu"><img src="img/close.png" alt="Закрыть" /></a></div> -->
-            <button id="mobile-menu-close" class="x-close mobile-menu__close"><img src="img/forms/close.png" alt="Закрыть"></button>
+            <button id="mobile-menu-close" class="x-close mobile-menu__close"><img src="src/popups/img/close.png" alt="Закрыть"></button>
             <ul class="mobile-menu__list">
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Главная</a></li>
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Участники</a></li>
@@ -184,8 +183,6 @@
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Контакты</a></li>
             </ul>
             <div class="mobile-menu__buttons">
-                <!-- <a href="#" class="button btn-transp">Вход</a>
-                <a id="b-regMob" href="#" class="button">Регистрация</a> -->
                 <button class="button_empty mobile-menu__login">Вход</button>
                 <button class="button mobile-menu__register">Регистрация</button>
             </div>
@@ -195,7 +192,7 @@
         <!-- Login form start -->
 
         <div id="login-form" class="login-form">
-            <button id="login-form-close" class="x-close login-form__close"><img src="img/forms/close.png" alt="Закрыть"></button>
+            <button id="login-form-close" class="x-close login-form__close"><img src="src/popups/img/close.png" alt="Закрыть"></button>
             <h3 class="login-form__title">Войти</h3>
             <input type="text" placeholder="Логин" class="login-form__input login-form__input_login">
             <input type="password" placeholder="Пароль" class="login-form__input login-form__input_password">
@@ -208,10 +205,10 @@
 
             <h4 class="login-form__title login-form__title_h4">Войти с помощью соцсети</h4>
             <div class="login-form__socials">
-                <button class="login-form__soc-button"><img src="img/footer/vk.png" alt="Вконтакте"></button>
-                <button class="login-form__soc-button"><img src="img/footer/ok.png" alt="Одноклассники"></button>
-                <button class="login-form__soc-button"><img src="img/footer/facebook.png" alt="Facebook"></button>
-                <button class="login-form__soc-button"><img src="img/footer/google2.png" alt="Google +"></button>
+                <button class="login-form__soc-button"><img src="src/popups/img/vk.png" alt="Вконтакте"></button>
+                <button class="login-form__soc-button"><img src="src/popups/img/ok.png" alt="Одноклассники"></button>
+                <button class="login-form__soc-button"><img src="src/popups/img/facebook.png" alt="Facebook"></button>
+                <button class="login-form__soc-button"><img src="src/popups/img/google2.png" alt="Google +"></button>
             </div>
         </div>
 

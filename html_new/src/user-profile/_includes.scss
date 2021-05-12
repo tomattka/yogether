@@ -1,0 +1,9 @@
+$mainPhotoWidth : 270px;
+$mainPhotoLaptop: 120px;
+$mainPhotoLaptopS: 90px;
+$mainPhotoMobile: 60px;
+
+@mixin headersAdjust{
+    @media (max-width: 768px) { font-size: 24px; }
+    @media (max-width: 480px) { font-size: 16px; }
+}
