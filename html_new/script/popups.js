@@ -38,16 +38,18 @@ function closeAll(){
         closeMenu();
     else
     {
-        popups.children().hide();
-        popups.hide();
-        darkscreen.hide();
+        //popups.children() - может пригодится потом
+        loginForm.fadeOut(150, function(){            
+            popups.hide();
+            darkscreen.hide();
+        });
     }
 }
 
 function showLoginForm(){
     darkscreen.show();
     popups.css('display','flex');
-    loginForm.show();
+    loginForm.fadeIn(150);
     scrollTopMobile();
     return false;
 }
