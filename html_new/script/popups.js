@@ -16,6 +16,7 @@ $(document).ready(function(){
     $('#aLogin').click(showLoginForm);
     $('#aLoginMob').click(showLoginForm);
     $('#bRegister').click(showLoginForm); // !!! temp
+    $('#bAddFriendMobile').click(showLoginForm); // !!! temp
 
     // Forms close functions
     darkscreen.click(closeAll);
@@ -51,10 +52,10 @@ function showLoginForm(){
     return false;
 }
 
-function scrollTop(event, speed=400) {
-    event.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, speed);
-}
+// function scrollTop(event) {
+//     event.preventDefault();
+//     $('html, body').animate({ scrollTop: 0 }, 400);
+// }
 
 function scrollTopMobile(){
     windowWidth = $(window).width();
