@@ -1,0 +1,42 @@
+$buttonBgColor: #7551A8;
+$buttonBgHoverColor: #AB89DB;
+$buttonEmptyColor: #49497D;
+$buttonEmptyColor: #49497D;
+
+/* main button */
+.button{
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 32px;
+    background: $buttonBgColor;
+    color: white;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+
+    &:hover{
+        background-color: $buttonBgHoverColor;
+    }
+
+    @media (max-width: 480px) {
+        padding: 12px 7px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 500;
+    }
+}
+.button_empty{
+    @extend .button;
+    background: none;
+    border: 2px solid $buttonEmptyColor;
+    color: $buttonEmptyColor;
+    font-weight: 600;
+    @media (max-width: 480px) { border-width: 1px;}
+
+    &:hover{
+        background-color: $buttonEmptyColor;
+        color: white;
+    }
+}

@@ -1,0 +1,19 @@
+.popups{
+    //display: flex;    
+    display: none;
+    position: fixed;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) { 
+        position: absolute;
+        align-items: flex-start;
+    }
+    @media (max-width: 480px) { 
+        padding: 0px 15px;
+    }
+}

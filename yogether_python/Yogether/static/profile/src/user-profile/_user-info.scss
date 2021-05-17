@@ -1,0 +1,73 @@
+.user-info{
+    &__name{
+        display: flex;
+        align-items: center;
+        margin-bottom: 48px;
+        @media (max-width: 768px) { margin-bottom: 28px;}
+        @media (max-width: 480px) { margin-bottom: 16px;}
+    }
+
+    &__photo{
+        display: none;
+        width: $mainPhotoLaptop;
+        border-radius: $mainPhotoLaptop / 2;
+        margin-right: 32px;
+        @media (max-width: 768px) { 
+            display: block;
+            width: $mainPhotoLaptopS;
+            border-radius: $mainPhotoLaptopS / 2;
+            margin-right: 24px;
+        }
+        @media (max-width: 480px) { 
+            width: $mainPhotoMobile;
+            border-radius: $mainPhotoMobile / 2;
+            margin-right: 16px;
+        }
+    }
+
+    &__h1{        
+        @include headersAdjust();
+    }
+
+    &__buttons{
+        display: none;
+
+        @media (max-width: 768px) {
+            display: flex;
+            margin-bottom: 50px;
+        }
+        @media (max-width: 480px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__button-left{
+        margin-right: 15px;
+        @media (max-width: 480px) { width: 136px; }
+    }
+
+    &__item{
+        display: flex;
+        margin-bottom: 30px;
+        line-height: 140%;
+
+        @media (max-width: 480px) {
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 16px;
+        }
+
+    }
+
+    &__param{
+        min-width: 187px;
+        flex-basis: 187px;
+        color: #8A8A9E;
+        
+        @media (max-width: 480px) {
+            min-width: 152px;
+            flex-basis: 152px;
+        }
+    }
+
+}

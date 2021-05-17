@@ -1,0 +1,33 @@
+/* Title */
+.title{
+    text-align: center;
+
+    &__h1, &__h2{
+        margin-bottom: 31px;
+
+        @media (max-width: 1024px) { margin-bottom: 24px; }
+        @media (max-width: 767px) { margin-bottom: 18px; }
+        @media (max-width: 480px) { line-height: 120%; }
+    }
+
+    &__breadcrumbs{
+        font-size: 14px;
+        height: 16px;
+        line-height: 16px;    
+        @media (max-width: 480px) { display: none; }
+    }
+    
+    &__link{ 
+        color: $headerLinksColor;
+
+        &::after{
+            content: "";
+            display: inline-block;
+            margin: 0 6px 0px 8px;
+            width: 6px;
+            height: 16px;
+            background: url($headerFolder + 'img/bc_arrow.svg') no-repeat;
+            background-position: center bottom;
+        }
+    }
+}

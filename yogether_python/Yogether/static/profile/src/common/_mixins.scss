@@ -1,0 +1,13 @@
+@mixin contentWrapper{
+    width: $contentDesktopWidth;
+    margin: auto;
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media (max-width: 480px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

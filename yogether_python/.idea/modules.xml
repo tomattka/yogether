@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Programming/Python/Django2/.idea/Django2.iml" filepath="$PROJECT_DIR$/../../../../../Programming/Python/Django2/.idea/Django2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/yogether_python.iml" filepath="$PROJECT_DIR$/.idea/yogether_python.iml" />
     </modules>
   </component>

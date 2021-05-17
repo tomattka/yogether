@@ -1,0 +1,31 @@
+// Common files
+@import "./common/variables";
+@import "./common/fonts";
+@import "./common/mixins";
+@import "./common/common";
+
+// Buttons
+@import "./buttons/button";
+
+// Header
+@import "./header/header";
+@import "./header/menu-block";
+@import "./header/title";
+
+// User profile
+@import "./user-profile/includes";
+@import "./user-profile/user-profile";
+@import "./user-profile/user-view";
+@import "./user-profile/user-info";
+
+
+// Footer
+@import "./footer/footer";
+
+// Popups
+@import "./popups/variables";
+@import "./popups/darkscreen";
+@import "./popups/popups";
+@import "./popups/mobile-menu";
+@import "./popups/login-form";
+@import "./popups/x-close";
