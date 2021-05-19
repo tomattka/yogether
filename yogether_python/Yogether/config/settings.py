@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.vk',
+    'userProfile',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,5 @@ STATICFILES_DIRS = [STATIC_DIR]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 1
+
+ACCOUNT_FORMS = {'login': 'userProfile.forms.YGLoginForm'}

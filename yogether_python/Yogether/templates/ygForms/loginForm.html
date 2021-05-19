@@ -1,0 +1,22 @@
+{% load static %}
+<div id="login-form" class="login-form">
+    <button id="login-form-close" class="x-close login-form__close"><img src="{% static 'profile/src/popups/img/close.png' %}" alt="Закрыть"></button>
+    <h3 class="login-form__title">Войти</h3>
+    {% include "../account/login.html" %}
+    <div class="login-form__links">
+        <a href="#" class="login-form__link">Восстановление пароля</a>
+        <a href="{% url 'account_signup' %}" class="login-form__link">Регистрация</a>
+    </div>
+    {% load socialaccount %}
+    {% get_providers as socialaccount_providers %}
+    {% if socialaccount_providers %}
+    <h4 class="login-form__title login-form__title_h4">Войти с помощью соцсети</h4>
+    <div class="login-form__socials">
+        <a href="{% provider_login_url 'vk' process='login' %}" class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/vk.png' %}" alt="Вконтакте"></a>
+        <button class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/ok.png' %}" alt="Одноклассники"></button>
+        <button class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/facebook.png' %}" alt="Facebook"></button>
+        <button class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/google2.png' %}" alt="Google +"></button>
+    </div>
+    {% endif %}
+
+</div>

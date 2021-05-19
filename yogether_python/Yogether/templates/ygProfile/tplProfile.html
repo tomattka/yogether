@@ -6,6 +6,7 @@
     <title>Yogether</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="{% static 'profile/src/profile.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'profile/src/TEMP.css' %}"> <!-- !!!!!!!!!!! -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
     <script src="{% static 'profile/src/common/jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'profile/src/popups/popups.js' %}"></script>
@@ -197,30 +198,7 @@
 
         <!-- Login form start -->
 
-        <div id="login-form" class="login-form">
-            <button id="login-form-close" class="x-close login-form__close"><img src="{% static 'profile/src/popups/img/close.png' %}" alt="Закрыть"></button>
-            <h3 class="login-form__title">Войти</h3>
-            <input type="text" placeholder="Логин" class="login-form__input login-form__input_login">
-            <input type="password" placeholder="Пароль" class="login-form__input login-form__input_password">
-            <!--div class="login-form__error">Введено неверное сочетание логин–пароль. Проверьте данные и повторите попытку.</div-->
-            <button class="button login-form__button">Войти</button>
-            <div class="login-form__links">
-                <a href="#" class="login-form__link">Восстановление пароля</a>
-                <a href="{% url 'account_signup' %}" class="login-form__link">Регистрация</a>
-            </div>
-            {% load socialaccount %}
-            {% get_providers as socialaccount_providers %}
-            {% if socialaccount_providers %}
-            <h4 class="login-form__title login-form__title_h4">Войти с помощью соцсети</h4>
-            <div class="login-form__socials">
-                <a href="{% provider_login_url 'vk' process='login' %}" class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/vk.png' %}" alt="Вконтакте"></a>
-                <button class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/ok.png' %}" alt="Одноклассники"></button>
-                <button class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/facebook.png' %}" alt="Facebook"></button>
-                <button class="login-form__soc-button"><img src="{% static 'profile/src/popups/img/google2.png' %}" alt="Google +"></button>
-            </div>
-            {% endif %}
-
-        </div>
+        {% include "../ygForms/loginForm.html" %}
 
         <!-- Login form end -->
 
