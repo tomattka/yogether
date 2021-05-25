@@ -8,14 +8,15 @@ class YgUser(AbstractUser):
     gender = models.IntegerField(null=True)
     phone = models.CharField(max_length=25, null=True)
     is_online = models.BooleanField(default=False, null=True)
+    social_data_loaded = models.BooleanField(default=False, null=True)
 
     class Meta:
         verbose_name = "Пользователь"
         verbose_name_plural = "Пользователи"
 
 class YgUserInfo(models.Model):
-    user_id = models.OneToOneField(YgUser, on_delete=models.CASCADE, primary_key=True)
-    birth_date = models.DateTimeField(null=True)
+    user = models.OneToOneField(YgUser, on_delete=models.CASCADE, primary_key=True)
+    birth_date = models.DateField(null=True)
     about = models.TextField(null=True)
     request = models.CharField(max_length=1000, null=True)
     links = models.CharField(max_length=2000, null=True)
