@@ -6,7 +6,7 @@ class YgUser(AbstractUser):
     """ Custom user model """
     profile_pic = models.ImageField(upload_to='user/profile_pic', blank=True, null=True)
     gender = models.IntegerField(null=True)
-    phone = models.CharField(max_length=25, null=True)
+    phone = models.CharField(max_length=25, blank=True, null=True)
     is_online = models.BooleanField(default=False, null=True)
     social_data_loaded = models.BooleanField(default=False, null=True)
 

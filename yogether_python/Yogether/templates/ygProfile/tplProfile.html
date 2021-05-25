@@ -12,7 +12,6 @@
     <script src="{% static 'profile/src/popups/popups.js' %}"></script>
 </head>
 <body>
-    <!-- !!!!!!!!!!!!!! Replace static path -->
     <!-- Header start -->
     <header class="header">
         <div class="header__wrapper">
@@ -59,75 +58,7 @@
     <!-- Header end -->
 
     <!-- Profile start -->
-
-    <div class="user-profile">
-        <div class="user-profile__wrapper">
-            <div class="user-view user-profile__view">
-                <!-- <div class="user-view__photos"> -->
-                    <div class="user-view__avatar"><a href="#"><img class="user-view__avatar-img" src="{% static 'profile/src/user-profile/img/main-photo.jpg' %}" alt="Ирина Яковлева" /></a></div>
-                    <h2 class="user-view__h2">Фотографии пользователя</h2>
-                    <div class="user-view__prevs">
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev1.jpg' %}" alt="Ирина Яковлева"></a>
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev2.jpg' %}" alt="Ирина Яковлева"></a>
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev3.jpg' %}" alt="Ирина Яковлева"></a>
-                        <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev4.jpg' %}" alt="Ирина Яковлева"></a>
-                    </div>
-                <!-- </div> -->
-                <div class="user-view__buttons">
-                    <button class="button user-view__add">Добавить в друзья</button>
-                    <button class="user-view__message"><img src="{% static 'profile/src/user-profile/img/message.svg' %}" alt="Написать сообщение"></button>
-                </div>
-            </div>
-            <div class="user-info user-profile__info">
-                <div class="user-info__name">
-                    <img class="user-info__photo" src="{% static 'profile/src/user-profile/img/main-photo.jpg' %}" alt="Ирина Яковлева">
-                    <h1 class="user-info__h1">Ирина Яковлева</h1>
-                </div>
-                <div class="user-info__buttons">
-                    <button id="bAddFriendMobile" class="button user-info__button-left">Добавить в друзья</button>
-                    <button class="button_empty">Написать сообщение</button>
-                </div>
-
-                <!-- User params start -->
-
-                    <!-- User params item start -->
-                    <div class="user-info__item">
-                        <div class="user-info__param">Город:</div>
-                        <div class="user-info__value">Ярославль</div>
-                    </div>
-                    <!-- User params item end -->
-
-                    
-                    <div class="user-info__item">
-                        <div class="user-info__param">Возраст:</div>
-                        <div class="user-info__value">29 лет</div>
-                    </div>                
-                    <div class="user-info__item">
-                        <div class="user-info__param">Направление:</div>
-                        <div class="user-info__value"><a href="#">Йога</a>, <a href="#">рейки</a>, <a href="#">биоэнергетика</a></div>
-                    </div>                
-                    <div class="user-info__item">
-                        <div class="user-info__param">Практики:</div>
-                        <div class="user-info__value"><a href="#">Хатха-йога</a>, <a href="#">пранаяма</a>, <a href="#">медитация</a></div>
-                    </div>                
-                    <div class="user-info__item">
-                        <div class="user-info__param">Род занятий:</div>
-                        <div class="user-info__value"><a href="#">Пресс-секретарь</a></div>
-                    </div>                
-                    <div class="user-info__item">
-                        <div class="user-info__param">Интересы:</div>
-                        <div class="user-info__value">
-                            <a href="#">Путешествия</a>, <a href="#">книги</a>, <a href="#">образование</a>, 
-                            <a href="#">саморазвитие</a>, <a href="#">курсы</a>, <a href="#">астрология</a>, <a href="#">прогулки</a>, <a href="#">вышивка крестиком</a>
-                        </div>
-                    </div>
-
-                <!-- User params end -->
-
-            </div>
-        </div>
-    </div>
-
+    {% include "../ygProfile/_user-info.html" %}
     <!-- Profile end -->
 
 

@@ -1,0 +1,89 @@
+{% load static %}
+
+{% if user.is_authenticated %}
+
+    <!-- Profile start -->
+
+    <div class="user-profile">
+        <div class="user-profile__wrapper">
+            <div class="user-view user-profile__view">
+                <div class="user-view__avatar"><a href="#"><img class="user-view__avatar-img"
+                {% if user.profile_pic %}
+                        src="{{ user.profile_pic.url }}"
+                {% else %}
+                        src="noimage.jpg"
+                {% endif %}
+                alt="{{ user.first_name }} {{ user.last_name }}" width="271" style="border-radius: 0;" /></a></div>
+                <h2 class="user-view__h2">Фотографии пользователя</h2>
+<!--                <div class="user-view__prevs">-->
+<!--                    <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev1.jpg' %}" alt="Ирина Яковлева"></a>-->
+<!--                    <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev2.jpg' %}" alt="Ирина Яковлева"></a>-->
+<!--                    <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev3.jpg' %}" alt="Ирина Яковлева"></a>-->
+<!--                    <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev4.jpg' %}" alt="Ирина Яковлева"></a>-->
+<!--                </div>-->
+                <div class="user-view__buttons">
+                    <button class="button user-view__add">Добавить в друзья</button>
+                    <button class="user-view__message"><img src="{% static 'profile/src/user-profile/img/message.svg' %}" alt="Написать сообщение"></button>
+                </div>
+            </div>
+            <div class="user-info user-profile__info">
+                <div class="user-info__name">
+                    <img class="user-info__photo"
+                    {% if user.profile_pic %}
+                        src="{{ user.profile_pic.url }}"
+                    {% else %}
+                        src="noimage.jpg"
+                    {% endif %}
+                    alt="{{ user.first_name }} {{ user.last_name }}" style="border-radius: 0;">
+                    <h1 class="user-info__h1">{{ user.first_name }} {{ user.last_name }}</h1>
+                </div>
+                <div class="user-info__buttons">
+                    <button id="bAddFriendMobile" class="button user-info__button-left">Добавить в друзья</button>
+                    <button class="button_empty">Написать сообщение</button>
+                </div>
+
+                <!-- User params start -->
+
+                    <!-- User params item start -->
+                    <div class="user-info__item">
+                        <div class="user-info__param">Место:</div>
+                        <div class="user-info__value">{{ user_info.location }}</div>
+                    </div>
+                    <!-- User params item end -->
+
+
+                    <div class="user-info__item">
+                        <div class="user-info__param">Дата рождения:</div>
+                        <div class="user-info__value">{{ user_info.birth_date }}</div>
+                    </div>
+<!--                    <div class="user-info__item">-->
+<!--                        <div class="user-info__param">Направление:</div>-->
+<!--                        <div class="user-info__value"><a href="#">Йога</a>, <a href="#">рейки</a>, <a href="#">биоэнергетика</a></div>-->
+<!--                    </div>-->
+<!--                    <div class="user-info__item">-->
+<!--                        <div class="user-info__param">Практики:</div>-->
+<!--                        <div class="user-info__value"><a href="#">Хатха-йога</a>, <a href="#">пранаяма</a>, <a href="#">медитация</a></div>-->
+<!--                    </div>-->
+<!--                    <div class="user-info__item">-->
+<!--                        <div class="user-info__param">Род занятий:</div>-->
+<!--                        <div class="user-info__value"><a href="#">Пресс-секретарь</a></div>-->
+<!--                    </div>-->
+<!--                    <div class="user-info__item">-->
+<!--                        <div class="user-info__param">Интересы:</div>-->
+<!--                        <div class="user-info__value">-->
+<!--                            <a href="#">Путешествия</a>, <a href="#">книги</a>, <a href="#">образование</a>,-->
+<!--                            <a href="#">саморазвитие</a>, <a href="#">курсы</a>, <a href="#">астрология</a>, <a href="#">прогулки</a>, <a href="#">вышивка крестиком</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                <!-- User params end -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile end -->
+
+    {% else %}
+    <p style="text-align: center; margin: 100px 0px 120px 0px;">Нет данных</p>
+    {% endif %}
