@@ -44,8 +44,8 @@ def my_callback(sender, user, **kwargs):
         # --------------------- Saving data -------------------
 
         user_info.birth_date = datetime.strptime(birth_date, '%d.%m.%Y')
-        user_info.location = location
-        user_yg.gender = gender
+        # user_info.location = location
+        # user_yg.gender = gender !!! Change
         user_yg.social_data_loaded = True
 
         user_info.save()
