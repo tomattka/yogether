@@ -44,38 +44,75 @@
 
                 <!-- User params start -->
 
-                    <!-- User params item start -->
+                    {% if user_info.location %}
                     <div class="user-info__item">
-                        <div class="user-info__param">Место:</div>
+                        <div class="user-info__param">Место жительства:</div>
                         <div class="user-info__value">{{ user_info.location }}</div>
                     </div>
-                    <!-- User params item end -->
+                    {% endif %}
 
-
+                    {% if user_info.birth_date %}
                     <div class="user-info__item">
-                        <div class="user-info__param">Дата рождения:</div>
-                        <div class="user-info__value">{{ user_info.birth_date }}</div>
+                        <div class="user-info__param">Возраст:</div>
+                        <div class="user-info__value">{{ user_info.getAge }}</div>
                     </div>
-<!--                    <div class="user-info__item">-->
-<!--                        <div class="user-info__param">Направление:</div>-->
-<!--                        <div class="user-info__value"><a href="#">Йога</a>, <a href="#">рейки</a>, <a href="#">биоэнергетика</a></div>-->
-<!--                    </div>-->
-<!--                    <div class="user-info__item">-->
-<!--                        <div class="user-info__param">Практики:</div>-->
-<!--                        <div class="user-info__value"><a href="#">Хатха-йога</a>, <a href="#">пранаяма</a>, <a href="#">медитация</a></div>-->
-<!--                    </div>-->
-<!--                    <div class="user-info__item">-->
-<!--                        <div class="user-info__param">Род занятий:</div>-->
-<!--                        <div class="user-info__value"><a href="#">Пресс-секретарь</a></div>-->
-<!--                    </div>-->
-<!--                    <div class="user-info__item">-->
-<!--                        <div class="user-info__param">Интересы:</div>-->
-<!--                        <div class="user-info__value">-->
-<!--                            <a href="#">Путешествия</a>, <a href="#">книги</a>, <a href="#">образование</a>,-->
-<!--                            <a href="#">саморазвитие</a>, <a href="#">курсы</a>, <a href="#">астрология</a>, <a href="#">прогулки</a>, <a href="#">вышивка крестиком</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    {% endif %}
 
+                    {% if user_info.marital_status %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Семейное положение:</div>
+                        <div class="user-info__value">{{ user_info.marital_status }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.doctrine_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Учение:</div>
+                        <div class="user-info__value">{{ user_info.doctrine_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.tradition_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Традиция:</div>
+                        <div class="user-info__value">{{ user_info.tradition_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.practice_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Практики:</div>
+                        <div class="user-info__value">{{ user_info.practice_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.experience %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Опыт практики:</div>
+                        <div class="user-info__value">{{ user_info.experience }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.interest_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Интересы:</div>
+                        <div class="user-info__value">{{ user_info.interest_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.request %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Ищу:</div>
+                        <div class="user-info__value">{{ user_info.request }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.about %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Обо мне:</div>
+                        <div class="user-info__value">{{ user_info.about }}</div>
+                    </div>
+                    {% endif %}
                 <!-- User params end -->
 
             </div>
