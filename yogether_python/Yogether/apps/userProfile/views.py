@@ -36,4 +36,4 @@ class UserProfile(View):
                 res += '<a href="#">' + interest.title + '</a>, '
             user_info.interest_list = res.removesuffix(', ')
 
-        return render(request, "ygProfile/tplProfile.html", {"form" : YGLoginForm, "user_info": user_info})
+        return render(request, "ygProfile/_user-info.html", {"form" : YGLoginForm, "user_info": user_info})

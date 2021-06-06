@@ -7,6 +7,26 @@ from allauth.account.signals import user_logged_in  #user_signed_up later - ?
 from django.dispatch import receiver
 from datetime import datetime
 
+from PIL import Image
+
+
+def auto_cut_image(img, size=270):
+    pil_img = Image.open(img)
+    img_width, img_height = pil_img.size
+    img_lengh = img_width
+    if img_height < img_width:
+        # широкая
+        img_lengh = img_height
+        top = 0
+        left = (img_width - img_lengh) // 2
+    else:
+        # высокая
+        top = (img_height - img_lengh) // 2
+        left = 0
+    pil_img = pil_img.crop((left, top, left + img_lengh, top + img_lengh))
+    pil_img = pil_img.resize((size, size))
+    pil_img.save(img.path)
+
 
 @receiver(user_logged_in)
 def my_callback(sender, user, **kwargs):
@@ -27,8 +47,7 @@ def my_callback(sender, user, **kwargs):
         extra_data = user_dataset.extra_data
 
         birth_date = extra_data['bdate']
-        location = extra_data['country']['title']  # Добавить проверку на город
-        # marital_status = "" - позже сделать
+        # location = extra_data['country']['title']  # Добавить проверку на город
         gender = extra_data['sex']  # Добавить приведение пола к словарю
         profile_pic_url = extra_data['photo_max_orig']
 
@@ -40,12 +59,11 @@ def my_callback(sender, user, **kwargs):
 
             img_name = urlparse(profile_pic_url).path.split('/')[-1]
             user_yg.profile_pic.save(img_name, File(img_temp))
+            auto_cut_image(user_yg.profile_pic)
 
         # --------------------- Saving data -------------------
 
         user_info.birth_date = datetime.strptime(birth_date, '%d.%m.%Y')
-        # user_info.location = location
-        # user_yg.gender = gender !!! Change
         user_yg.social_data_loaded = True
 
         user_info.save()

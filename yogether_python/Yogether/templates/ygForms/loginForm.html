@@ -2,7 +2,7 @@
 <div id="login-form" class="login-form">
     <button id="login-form-close" class="x-close login-form__close"><img src="{% static 'profile/src/popups/img/close.png' %}" alt="Закрыть"></button>
     <h3 class="login-form__title">Войти</h3>
-    {% include "../account/login.html" %}
+    {% include "../account/login_form.html" %}
     <div class="login-form__links">
         <a href="#" class="login-form__link">Восстановление пароля</a>
         <a href="{% url 'account_signup' %}" class="login-form__link">Регистрация</a>

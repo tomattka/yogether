@@ -1,4 +1,8 @@
+{% extends "ygProfile/tplProfile.html" %}
+
 {% load static %}
+
+{% block content %}
 
 {% if user.is_authenticated %}
 
@@ -11,9 +15,9 @@
                 {% if user.profile_pic %}
                         src="{{ user.profile_pic.url }}"
                 {% else %}
-                        src="noimage.jpg"
+                        src="/static/profile/src/user-profile/img/no-photo.png"
                 {% endif %}
-                alt="{{ user.first_name }} {{ user.last_name }}" width="271" style="border-radius: 0;" /></a></div>
+                alt="{{ user.first_name }} {{ user.last_name }}" width="270" /></a></div>
                 <h2 class="user-view__h2">Фотографии пользователя</h2>
 <!--                <div class="user-view__prevs">-->
 <!--                    <a href="#" class="user-view__prevs-link"><img class="user-view__prevs-img" src="{% static 'profile/src/user-profile/img/prev1.jpg' %}" alt="Ирина Яковлева"></a>-->
@@ -32,9 +36,9 @@
                     {% if user.profile_pic %}
                         src="{{ user.profile_pic.url }}"
                     {% else %}
-                        src="noimage.jpg"
+                        src="/static/profile/src/user-profile/img/no-photo.png"
                     {% endif %}
-                    alt="{{ user.first_name }} {{ user.last_name }}" style="border-radius: 0;">
+                    alt="{{ user.first_name }} {{ user.last_name }}">
                     <h1 class="user-info__h1">{{ user.first_name }} {{ user.last_name }}</h1>
                 </div>
                 <div class="user-info__buttons">
@@ -121,6 +125,8 @@
 
     <!-- Profile end -->
 
-    {% else %}
-    <p style="text-align: center; margin: 100px 0px 120px 0px;">Нет данных</p>
-    {% endif %}
+{% else %}
+<p style="text-align: center; margin: 100px 0px 120px 0px;">Нет данных</p>
+{% endif %}
+
+{% endblock %}
