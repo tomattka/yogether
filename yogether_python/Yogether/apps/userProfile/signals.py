@@ -1,3 +1,5 @@
+from re import match
+
 import urllib.request
 from urllib.parse import urlparse
 from django.core.files import File
@@ -8,6 +10,7 @@ from django.dispatch import receiver
 from datetime import datetime
 
 from PIL import Image
+
 
 
 def auto_cut_image(img, size=270):
@@ -46,13 +49,64 @@ def my_callback(sender, user, **kwargs):
         user_dataset = user.socialaccount_set.filter(provider='vk')[0]
         extra_data = user_dataset.extra_data
 
-        birth_date = extra_data['bdate']
-        # location = extra_data['country']['title']  # Добавить проверку на город
-        gender = extra_data['sex']  # Добавить приведение пола к словарю
+
+
+        # -------- City/country ---------
+
+        location = extra_data.get('city')
+        if not location:
+            location = extra_data.get('country')
+        if location:
+            location = location.get('title')
+            # Saving to database
+            from .models import YgLocation
+            yg_location = YgLocation.objects.get(title__iexact=location) #case insensitive
+            if not yg_location:
+                yg_location = YgLocation(title=location)
+                yg_location.save()
+            user_info.location = yg_location
+        else:
+            user_info.location = None
+
+        # -------- Birth date ---------
+        if extra_data['bdate']:
+            birth_date = extra_data['bdate']
+            user_info.birth_date = datetime.strptime(birth_date, '%d.%m.%Y')
+
+        # -------- Gender ---------
+        if extra_data['sex']:
+            gender = extra_data['sex']  # Добавить приведение пола к словарю
+            if gender == 1:
+                gender = 'Женский'
+            else:
+                gender = 'Мужской'
+            from .models import YgGender
+            yg_gender = YgGender.objects.get(title__iexact=gender)
+            user_yg.gender = yg_gender
+
+        # -------- Marital status ---------
+        relation = extra_data['relation']
+        if relation:
+            status = {  # статусы контакта
+                1: 'свободен',  # не замужем
+                2: 'в отношениях',
+                3: 'в отношениях',
+                4: 'женат',  # замужем
+                5: 'в отношениях',
+                6: 'в поиске', # в активном поиске
+                7: 'в отношениях',
+                8: 'в отношениях'
+            }.get(relation)
+
+            from .models import YgMaritalStatus
+            yg_status = YgMaritalStatus.objects.get(title__iexact=status)
+            user_info.marital_status = yg_status
+
+            # -------------------- Getting image -------------------
+
         profile_pic_url = extra_data['photo_max_orig']
 
-        # -------------------- Getting image -------------------
-        if profile_pic_url:
+        if profile_pic_url and 'camera_400.png' not in profile_pic_url:
             img_temp = NamedTemporaryFile()
             img_temp.write(urllib.request.urlopen(profile_pic_url).read())
             img_temp.flush()
@@ -63,7 +117,7 @@ def my_callback(sender, user, **kwargs):
 
         # --------------------- Saving data -------------------
 
-        user_info.birth_date = datetime.strptime(birth_date, '%d.%m.%Y')
+
         user_yg.social_data_loaded = True
 
         user_info.save()

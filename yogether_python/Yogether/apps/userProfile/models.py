@@ -26,6 +26,7 @@ class YgLocation(models.Model):
 
 class YgMaritalStatus(models.Model):
     title = models.CharField(max_length=100, verbose_name='Заголовок')
+    title_fem = models.CharField(max_length=100, verbose_name='Написание для женщин', blank=True, null=True)
     order = models.IntegerField(default=0, verbose_name='Порядок')
 
     def __str__(self):
@@ -99,7 +100,7 @@ class YgInterest(models.Model):
 class YgUser(AbstractUser):
     """ Custom user model """
     profile_pic = models.ImageField(upload_to='user/profile_pic', verbose_name='Аватар', blank=True, null=True)
-    gender = models.ForeignKey(YgGender, on_delete=models.SET_NULL, verbose_name='Пол', blank=True, null=True)
+    gender = models.ForeignKey(YgGender, on_delete=models.SET_NULL, verbose_name='Гендер', blank=True, null=True)
     phone = models.CharField(max_length=25, verbose_name='Телефон', blank=True, null=True)
     is_online = models.BooleanField(verbose_name='Онлайн', default=False, null=True)
     social_data_loaded = models.BooleanField(verbose_name='Загружены данные соцсети', default=False, null=True)

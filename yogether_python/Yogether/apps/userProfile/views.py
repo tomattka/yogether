@@ -9,7 +9,7 @@ class UserProfile(View):
         user_id = request.user.id
         user_info = {}
         if YgUserInfo.objects.filter(user_id=user_id):
-            user_info = YgUserInfo.objects.filter(user_id=user_id)[0]
+            user_info = YgUserInfo.objects.get(user_id=user_id)
 
             # !!! Позже, когда будут генериться конкретные ссылки, заменю простыню ниже
             # Учение
@@ -35,5 +35,10 @@ class UserProfile(View):
             for interest in user_info.interests.all():
                 res += '<a href="#">' + interest.title + '</a>, '
             user_info.interest_list = res.removesuffix(', ')
+
+            # Выводим феминитивы при необходимости
+            user_info.str_mar_status = str(user_info.marital_status)
+            if (str(request.user.gender) == 'Женский') and user_info.marital_status.title_fem:
+                user_info.str_mar_status = user_info.marital_status.title_fem
 
         return render(request, "ygProfile/_user-info.html", {"form" : YGLoginForm, "user_info": user_info})
