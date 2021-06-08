@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.views.generic.base import View
 from .forms import YGLoginForm
-from .models import YgUserInfo
+from .models import YgUser, YgUserInfo
+from django.db.models import Q
+from django.contrib.auth import authenticate
 
 
 class UserProfile(View):
@@ -42,3 +44,21 @@ class UserProfile(View):
                 user_info.str_mar_status = user_info.marital_status.title_fem
 
         return render(request, "ygProfile/_user-info.html", {"form" : YGLoginForm, "user_info": user_info})
+
+
+class LoginCheck(View):
+    def get(self, request):
+        username = request.GET.get('username', None)
+        password = request.GET.get('password', None)
+        result = 'no user'
+
+        check_if_user_exists = YgUser.objects.filter(Q(username=username) | Q(email=username)).exists()
+        if check_if_user_exists:
+            result = 'exists'
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                result = 'ok'
+            else:
+                result = 'wrong password'
+
+        return render(request, 'ygProfile/login-check.html', {'result': result})

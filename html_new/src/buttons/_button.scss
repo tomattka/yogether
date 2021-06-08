@@ -29,9 +29,10 @@ $buttonEmptyColor: #49497D;
 }
 .button_empty{
     @extend .button;
-    background: none;
+    background: none; 
     border: 2px solid $buttonEmptyColor;
     color: $buttonEmptyColor;
+    
     font-weight: 600;
     @media (max-width: 480px) { border-width: 1px;}
 

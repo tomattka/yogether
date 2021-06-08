@@ -1,0 +1,26 @@
+.logout-confirm{
+    @include allforms;
+
+    display: block;
+
+    &__text{
+        margin-bottom: 20px;
+    }
+    
+    &__ok{
+        min-width: 100px;
+        margin-right: 10px;
+    }
+
+    &__cancel{
+        height: 45px;
+        top: 2px;
+        padding: 11px 32px;
+        min-width: 100px;
+
+        @media (max-width: 480px) {
+            height: 40px;
+            padding: 11px 7px;
+        }
+    }
+}

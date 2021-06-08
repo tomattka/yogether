@@ -1,4 +1,4 @@
-.login-form{
+@mixin allforms {
     //display: block;
     display: none;
     width: 400px;
@@ -15,7 +15,8 @@
         top: 15px;
     } 
     @media (max-width: 430px) {  
-        width: 100%; 
+        width: 100%;
+        width: calc(100% - 30px);
         min-width: 290px;
     }
     @media (max-width: 360px) { padding: 30px 15px 45px 15px; }
@@ -39,6 +40,12 @@
             line-height: 24px;
         }
     }
+}
+
+.login-form{
+    
+    @include allforms;
+
     &__input{
         display: block;
         width: 100%;
@@ -64,7 +71,11 @@
         font-size: 14px;
         margin-bottom: 15px;
     }
+    &__load{
+        margin-bottom: 15px;
+    }
     &__button{
+        margin-top: 5px;
         width: 160px;
         @media (max-width: 480px) { 
             padding: 14px 32px;

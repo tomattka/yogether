@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.vk',
     'userProfile',
+    'django_cleanup',  # should go after all apps
 ]
 
 MIDDLEWARE = [
@@ -151,5 +152,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1
 
 ACCOUNT_FORMS = {'login': 'userProfile.forms.YGLoginForm'}
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_LOGOUT_ON_GET = True  # Logout without confirmation
 
 AUTH_USER_MODEL = 'userProfile.YgUser'
