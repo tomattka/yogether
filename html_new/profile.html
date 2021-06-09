@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
     <script src="src/common/jquery-3.6.0.min.js"></script>
     <script src="src/popups/popups.js"></script>
+    <script src="src/popups/login.js"></script>
 </head>
 <body>
 
@@ -29,7 +30,7 @@
                 </ul>
                 <div class="menu-block__buttons">
                     <a id="aLogin" href="#" class="menu-block__login menu-block__link">Вход</a>
-                    <button id="bRegister" class="menu-block__register button">Регистрация</button>
+                    <a href="#" id="bRegister" class="menu-block__register button">Регистрация</a>
                 </div>
                 <div class="menu-block__mobile-buttons">
                     <a id="aLoginMob" href="#"><img src="src/header/img/login_mobile.png" alt="Вход"></a>
@@ -194,11 +195,11 @@
         <div id="login-form" class="login-form">
             <button id="login-form-close" class="x-close login-form__close"><img src="src/popups/img/close.png" alt="Закрыть"></button>
             <h3 class="login-form__title">Войти</h3>
-            <input type="text" placeholder="Логин" class="login-form__input login-form__input_login">
-            <input type="password" placeholder="Пароль" class="login-form__input login-form__input_password">
-            <div class="login-form__load"><img src="src/popups/img/loading.gif" width="40" alt="Загрузка" /></div>
-            <div class="login-form__error">Введено неверное сочетание логин–пароль. Проверьте данные и повторите попытку.</div>
-            <button class="button login-form__button">Войти</button>
+            <input id="iLogin" type="text" placeholder="Логин" class="login-form__input login-form__input_login">
+            <input id="iPassword" type="password" placeholder="Пароль" class="login-form__input login-form__input_password">
+            <div id="login-progress" class="login-form__load"><img src="src/popups/img/loading.gif" width="40" alt="Загрузка" /></div>
+            <div id="login-error" class="login-form__error">Введено неверное сочетание логин–пароль. Проверьте данные и повторите попытку.</div>
+            <a href="#login-success" id="login-form__login-button" class="button login-form__button">Войти</a>
             <div class="login-form__links">
                 <a href="#" class="login-form__link">Восстановление пароля</a>
                 <a href="#" class="login-form__link">Регистрация</a>
@@ -218,8 +219,8 @@
             <h3 class="logout-confirm__title">Выйти?</h3>
             <p class="logout-confirm__text">Действительно хотите выйти?</p>
             <div class="logout-confirm__buttons">
-                <button class="button logout-confirm__ok">Выйти</button>
-                <button class="button_empty logout-confirm__cancel">Отмена</button>
+                <a href="#logout" class="button logout-confirm__ok">Выйти</a>
+                <button id="logout-cancel" class="button_empty logout-confirm__cancel">Отмена</button>
             </div>
         </div>
 

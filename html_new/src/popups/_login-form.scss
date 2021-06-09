@@ -46,6 +46,8 @@
     
     @include allforms;
 
+    display: block;
+
     &__input{
         display: block;
         width: 100%;
@@ -70,9 +72,11 @@
         color: $errorMsgColor;
         font-size: 14px;
         margin-bottom: 15px;
+        display: none;
     }
     &__load{
         margin-bottom: 15px;
+        display: none;
     }
     &__button{
         margin-top: 5px;

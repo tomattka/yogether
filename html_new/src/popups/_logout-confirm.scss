@@ -1,8 +1,6 @@
 .logout-confirm{
     @include allforms;
 
-    display: block;
-
     &__text{
         margin-bottom: 20px;
     }

@@ -1,4 +1,4 @@
-var mobMenu, loginForm, popups, darkscreen;
+var mobMenu, loginForm, logoutMessage, popups, darkscreen;
 
 $(document).ready(function(){
 
@@ -7,6 +7,7 @@ $(document).ready(function(){
     popups = $("#popups");
     darkscreen = $('#darkscreen');
     loginForm = $('#login-form');
+    logoutMessage = $('#logout-confirm');
 
     // --------- Mobile menu ---------- //
     $("#mobile-menu-close").click(closeMenu); // menu x button
@@ -15,14 +16,22 @@ $(document).ready(function(){
     // Login form show
     $('#aLogin').click(showLoginForm);
     $('#aLoginMob').click(showLoginForm);
-    $('#bRegister').click(showLoginForm); // !!! temp
-    $('#bAddFriendMobile').click(showLoginForm); // !!! temp
+    // Logout message show
+    $('#bRegister').click(showLogoutMessage); // !!! temp
+    $('#bAddFriendMobile').click(showLogoutMessage); // !!! temp
 
     // Forms close functions
     darkscreen.click(closeAll);
     popups.click(closeAll);
     $('#login-form-close').click(closeAll);
+    $('#logout-confirm-close').click(closeAll);
+    $('#logout-cancel').click(closeAll);
+
+    // Prevent form click reaction
     loginForm.click(function(e){
+        e.stopPropagation();
+    });
+    logoutMessage.click(function(e){
         e.stopPropagation();
     });
 
@@ -39,10 +48,14 @@ function closeAll(){
     else
     {
         //popups.children() - может пригодится потом
-        loginForm.fadeOut(150, function(){            
+        popups.children().fadeOut(150, function(){            
             popups.hide();
             darkscreen.hide();
         });
+        // loginForm.fadeOut(150, function(){            
+        //     popups.hide();
+        //     darkscreen.hide();
+        // });
     }
 }
 
@@ -50,6 +63,14 @@ function showLoginForm(){
     darkscreen.show();
     popups.css('display','flex');
     loginForm.fadeIn(150);
+    scrollTopMobile();
+    return false;
+}
+
+function showLogoutMessage(){
+    darkscreen.show();
+    popups.css('display','flex');
+    logoutMessage.fadeIn(150);
     scrollTopMobile();
     return false;
 }

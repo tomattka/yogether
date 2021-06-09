@@ -54,7 +54,6 @@ class LoginCheck(View):
 
         check_if_user_exists = YgUser.objects.filter(Q(username=username) | Q(email=username)).exists()
         if check_if_user_exists:
-            result = 'exists'
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 result = 'ok'
