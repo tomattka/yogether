@@ -1,4 +1,4 @@
-var mobMenu, loginForm, popups, darkscreen;
+var mobMenu, loginForm, logoutMessage, popups, darkscreen;
 
 $(document).ready(function(){
 
@@ -7,6 +7,7 @@ $(document).ready(function(){
     popups = $("#popups");
     darkscreen = $('#darkscreen');
     loginForm = $('#login-form');
+    logoutMessage = $('#logout-confirm');
 
     // --------- Mobile menu ---------- //
     $("#mobile-menu-close").click(closeMenu); // menu x button
@@ -15,14 +16,21 @@ $(document).ready(function(){
     // Login form show
     $('#aLogin').click(showLoginForm);
     $('#aLoginMob').click(showLoginForm);
-    $('#bRegister').click(showLoginForm); // !!! temp
-    $('#bAddFriendMobile').click(showLoginForm); // !!! temp
+
+    // Logout message show
+    $('#aLogout').click(showLogoutMessage);
 
     // Forms close functions
     darkscreen.click(closeAll);
     popups.click(closeAll);
     $('#login-form-close').click(closeAll);
+    $('#logout-confirm-close').click(closeAll);
+    $('#logout-cancel').click(closeAll);
+
     loginForm.click(function(e){
+        e.stopPropagation();
+    });
+    logoutMessage.click(function(e){
         e.stopPropagation();
     });
 
@@ -54,10 +62,13 @@ function showLoginForm(){
     return false;
 }
 
-// function scrollTop(event) {
-//     event.preventDefault();
-//     $('html, body').animate({ scrollTop: 0 }, 400);
-// }
+function showLogoutMessage(){
+    darkscreen.show();
+    popups.css('display','flex');
+    logoutMessage.fadeIn(150);
+    scrollTopMobile();
+    return false;
+}
 
 function scrollTopMobile(){
     windowWidth = $(window).width();

@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
     <script src="{% static 'profile/src/common/jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'profile/src/popups/popups.js' %}"></script>
+    <script src="{% static 'profile/src/popups/login.js' %}"></script>
 </head>
 <body>
     <!-- Header start -->
@@ -131,10 +132,12 @@
         <!-- Mobile menu end -->
 
         <!-- Login form start -->
-
         {% include "../ygForms/loginForm.html" %}
-
         <!-- Login form end -->
+
+        <!-- Logout message start -->
+        {% include "../ygForms/logoutMessage.html" %}
+        <!-- Logout message end -->
 
     </div>        
 

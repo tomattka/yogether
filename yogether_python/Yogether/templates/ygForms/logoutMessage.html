@@ -1,0 +1,10 @@
+{% load static %}
+<div id="logout-confirm" class="logout-confirm">
+    <button id="logout-confirm-close" class="x-close logout-confirm__close"><img src="{% static 'profile/src/popups/img/close.png' %}" alt="Закрыть"></button>
+    <h3 class="logout-confirm__title">Выйти?</h3>
+    <p class="logout-confirm__text">Действительно хотите выйти?</p>
+    <div class="logout-confirm__buttons">
+        <a href="{% url 'account_logout' %}" class="button logout-confirm__ok">Выйти</a>
+        <button id="logout-cancel" class="button_empty logout-confirm__cancel">Отмена</button>
+    </div>
+</div>

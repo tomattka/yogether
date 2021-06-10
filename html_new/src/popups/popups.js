@@ -18,7 +18,6 @@ $(document).ready(function(){
     $('#aLoginMob').click(showLoginForm);
     // Logout message show
     $('#bRegister').click(showLogoutMessage); // !!! temp
-    $('#bAddFriendMobile').click(showLogoutMessage); // !!! temp
 
     // Forms close functions
     darkscreen.click(closeAll);

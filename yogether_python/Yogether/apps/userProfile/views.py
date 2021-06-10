@@ -4,6 +4,7 @@ from .forms import YGLoginForm
 from .models import YgUser, YgUserInfo
 from django.db.models import Q
 from django.contrib.auth import authenticate
+from django.views.decorators.csrf import csrf_exempt
 
 
 class UserProfile(View):
@@ -47,6 +48,8 @@ class UserProfile(View):
 
 
 class LoginCheck(View):
+
+    @csrf_exempt
     def get(self, request):
         username = request.GET.get('username', None)
         password = request.GET.get('password', None)
