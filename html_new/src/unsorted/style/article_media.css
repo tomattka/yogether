@@ -1,0 +1,117 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    header.header{
+        background-size: 1500px auto;
+        height: 340px;
+    }
+    .header .title{
+        margin-top: 56px;
+    }
+    .header .title h1{
+        font-size: 36px;
+    }
+    .header .title .bc{
+        margin-top: 24px;
+    }
+    article p, article h4, article p.desc{
+        width: 100%;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+    .header .title h1{
+        font-size: 32px;
+    }
+    article{
+        margin: 60px auto 90px auto;
+    }
+    article.container{
+        padding: 15px;
+    }
+    article h2{
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    article h3{
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    article h4{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    article p, article img, article h4{
+        margin-top: 30px;
+    }
+    article p.desc{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    header.header{
+        height: 300px;
+        background-position: bottom center;
+        background-image: url('../img/mountains_bg_mob.jpg');
+        background-size: 100% auto;
+    }
+    .header .title{
+        margin-top: 56px;
+    }
+    .header .title h1{
+        font-size: 24px;
+        line-height: 120%;
+    }
+    .header .title .bc{
+            display: none;
+    }
+    article{
+        margin: 30px auto 60px auto;
+        font-size: 14px;
+    }
+    article h2, article h3{
+        text-align: left;
+    }
+    article h2{
+        font-size: 24px;
+    }
+    article p, article img, article h4{
+        margin-top: 15px;
+    }
+}
+
+/* Fix */
+@media only screen and (max-width: 340px) {
+    header.header{
+        background-size: 320px auto;
+    }
+}
+
+/* Smallest phones */
+@media only screen and (max-width: 319px) {
+    header.header{
+        background-position: top center;
+    }
+    article h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    article h3{
+        font-size: 18px;
+    }
+    article h4{
+        font-size: 16px;
+    }
+    article p.desc{
+        font-size: 14px;
+    }
+
+}

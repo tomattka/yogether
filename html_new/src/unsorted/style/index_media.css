@@ -1,0 +1,288 @@
+/* убираем отступы у сетки бутстрапа для больших размеров */
+ @media only screen and (min-width: 1260px) {
+    header .slogan div{
+        padding: 0px;
+    }
+    header .buttons{
+        margin-left: -15px;
+    }
+ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    header .slogan h1{
+        font-size: 40px;
+    }
+    /* ------------- Недавно зарегистрировались 993-1200 ------------- */
+    .people .pinkbg{
+        width: 310px;
+    }
+    /* Видео */
+    .video{        
+        margin: 90px auto 150px auto;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .firstscreen{
+        background-size: auto 100%;
+        background-position: center bottom;
+        min-height: 100%;
+        height: auto;
+    }
+    header .slogan{
+        padding-top: 14.1vh;
+        text-align: center;
+    }
+    header .slogan h1{
+        font-size: 32px;
+    }
+    header .buttons{
+        text-align: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    /*  Недавно зарегистрировались  */
+    .people .pinkbg{
+        width: 350px;
+    }    
+    /* ------------- Видео 481-767 ------------- */
+    .video{        
+        margin: 80px auto 90px auto;
+    }
+    .video h2{
+        margin-bottom: 45px;
+    }
+    .video .player{
+        margin-bottom: 45px;
+    }
+    .video p{
+        margin-bottom: 0px;
+    }
+
+    /* ------------- Преимущества 769-992 ------------- */
+    .features{
+        height: auto;
+        background: url("../img/bg-girl_light.jpg") no-repeat;
+        background-position: center bottom;
+        background-color: #f9f9f9;
+        padding-bottom: 120px;
+        overflow: hidden;
+    }
+    
+}
+
+/* Костыль для бэкграунда первого экрана */
+@media only screen and (max-width: 992px) and (min-width: 846px) and (max-height: 355px) {
+    .firstscreen{
+        min-height: 500px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+    /* Недавно зарегистрировались */
+    .people{
+        margin-bottom: 80px;
+    }
+    .people input.search{ 
+        margin-right: 15px;   
+        margin-left: 15px;   
+    }
+    .people .pinkbg{
+        width: 400px;
+    }
+    /* ------------- Преимущества 481-767 ------------- */
+    .features{
+        padding-bottom: 95px;
+        overflow: auto;
+    }
+    .features h2{
+        margin: 90px auto 60px auto;
+    }
+    .features .item{
+        width: 400px;
+        margin: auto;
+        margin-bottom: 32px;
+        min-height: auto;
+    }    
+    .features .item p{
+        width: auto;
+    }
+    .features .item br{
+        display: none;
+    }
+    .features .register{
+        margin-top: 60px;
+        font-size: 22px;
+    }
+    /* Видео */
+    .video p{
+        font-size: 16px;
+    }    
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    /* Первый экран */
+    header .slogan{
+        padding-top: 14.1vh;
+        text-align: center;
+    }
+    header .slogan h1{
+        font-size: 24px;
+    }
+    header .buttons{
+        margin-left: -18px;
+    }
+    header .buttons a{
+        margin-right: 14px;
+        padding: 13px 24px;
+    }        
+
+    /* ------------- Недавно зарегистрировались 320-480 ------------- */   
+    .people{
+        margin-bottom: 35px;
+    }
+    .people input.search{  
+        width: 100%;
+        max-width: 370px;
+        margin: auto 15px;
+        padding: 14px 16px 16px 46px;
+        background-position: 14px 14px;
+        background-size: 20px;
+    }    
+    .people h2{
+        margin: 40px auto;
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .people .pinkbg{ 
+        width: 100%;
+        /* min-width: 288px; ? */
+        max-width: 370px;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 90%;
+        height: 178px;
+        margin-bottom: 20px;
+        padding: 20px;
+        padding-right: 5px
+    }
+    .people .name{
+        margin-bottom: 12px;
+    }
+    .people .about{
+        height: 32px;
+        line-height: 18px;
+    }
+
+    /* ------------- Преимущества 320-480 ------------- */
+    .features{
+        padding-bottom: 78px;
+    }
+    .features h2{
+        margin: 40px auto;
+    }
+    .features .items{
+        height: auto;
+    }
+    .features .items .col-12{
+        padding: 0px;
+    }
+    .features .item{
+        width: auto;
+        padding-left: 60px;
+        background-size: 40px;
+    }
+    .features .item b{        
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .features .register{
+        font-size: 20px;
+        margin-top: 28px; /* +32px from item */
+    }
+    .features .register p{
+        margin-bottom: 32px;
+    }
+    .features .register a.button{
+        padding: 13px 24px;
+    }    
+
+    /* Видео */
+    .video{        
+        margin: 77px auto 40px auto;
+    }
+    .video h2{
+        margin-bottom: 40px;
+    }
+    .video .player{
+        margin-bottom: 40px;
+    }
+    .video p{
+        font-size: 14px;
+        line-height: 160%;
+    }
+
+}
+
+/* Smallest phones */
+@media only screen and (max-width: 319px) {
+    header .buttons a{
+        display: block;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    header .buttons a, header .buttons a.register{
+        width: 80%;
+        position: relative;
+        left: 50%;
+        margin-left: -40%;
+    }
+    header .slogan h1{
+        font-size: 18px;
+    }
+    /* Недавно зарегистрировались <319 */   
+    .people{
+        min-width: 240px;
+    }
+    .people input.search{  
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .people .pinkbg{         
+        padding: 15px;
+        height: auto;
+    }
+    .people .avatar{
+        width: 60px;        
+        margin-right: 10px;        
+        margin-bottom: 20px;
+    }
+    .people .name{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .people .interests a{
+        white-space: nowrap;
+    }    
+    /* Преимущества <319 */  
+    .features .item{
+        padding-left: 44px;
+        background-size: 30px;
+    }
+    .features .item b{        
+        font-size: 14px;
+    }
+    .features .item p{
+        font-size: 12px;
+    }
+    .features .register{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+}

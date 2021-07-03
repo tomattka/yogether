@@ -1,0 +1,158 @@
+/* убираю отступы у сетки бутстрапа для больших размеров */
+ @media only screen and (min-width: 1260px) {
+    header{
+        padding: inherit 0px;
+    }
+    header .row div{
+        padding: 0px;
+    }
+ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    /* Футер */
+    footer .copyright{
+        white-space: normal;
+    }    
+    footer .menu{
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    footer .logo{
+        margin-top: 10px;
+    }
+    footer .desc{
+        margin-bottom: 10px;
+    }
+    footer .social{
+        margin-bottom: 30px;
+    }
+        footer .social a{
+            margin: auto 5.5px;
+        }
+    footer .copyright{
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    h2{
+        font-size: 36px;
+    }
+    header .mobile-menu{
+        padding-top: 9px;
+    }    
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+    h2{
+        font-size: 28px;
+    }
+    /* ------------- Футер 481-767 ------------- */
+    footer{
+        padding-bottom: 25px;
+        text-align: center;
+    }
+    footer .logo{
+        margin-top: 0px;
+    }
+    footer .desc{
+        margin-bottom: 24px;
+        line-height: 140%;
+    }
+    footer .desc, footer .copyright, footer .privacy{        
+        padding: 0;
+    }
+    footer .social{
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+    footer .copyright{
+        margin-top: 0px;
+        margin-bottom: 40px;
+        line-height: 140%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        font-weight: normal;
+    }
+    footer .privacy a{
+        display: block;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    h2{
+        font-size: 24px;
+    }
+    /* Первый экран */
+    header{
+        padding: 0px;
+        padding-top: 20px;
+    }
+    header figure.logo img{
+        width: 52px;
+        margin-right: 8px;
+    }
+    header figure.logo figcaption{
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 12px;
+    }
+    header .mobile-menu{
+        padding-top: 0px;
+    }
+    
+    /* ------------- Окно регистрации 320-480 ------------- */
+    #regform{
+        width: 100%;
+        margin: 30px auto;
+        left: 0;
+        top: 0;
+    }
+    #regform .content{
+        padding: 30px 15px 60px 15px;
+    }
+    #regform h3{
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+}
+
+/* Smallest phones */
+@media only screen and (max-width: 319px) {
+    h2{
+        font-size: 18px;
+    }
+    header .mobile-menu a.login{
+        display: none;
+    }
+    /* Форма регистрации */    
+    #regform{
+        min-width: 210px;
+    }
+    #regform .content{
+        padding: 30px 10px 30px 10px;
+    }
+    #regform h3{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    #regform p.desc{
+        font-size: 14px;
+    }
+
+}
+
+/* Убираем фиксацию окна регистрации */
+@media only screen and (max-height: 660px){
+    #regform{        
+        position: absolute;
+    }
+}

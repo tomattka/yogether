@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Yogether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="src/unsorted/bootstrap-4.5.2-dist/css/bootstrap.css">
+	
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/unsorted/style/index.css">
+    <link rel="stylesheet" href="src/unsorted/style/common.css">
+    <link rel="stylesheet" href="src/unsorted/style/index_media.css">	
+    <link rel="stylesheet" href="src/unsorted/style/common_media.css">	
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+    <!-- Scripts -->
+    <script src="src/unsorted/jquery/jquery-3.5.1.js"></script>
+    <script src="src/unsorted/js/main.js"></script>
+</head>
+<body>
+
+
+<!-- Dark Screen and Menu-->
+<div id="darkened" class="darkened"></div>
+<div id="menuroll">    
+    <div id="darkened_menu" class="darkened"></div>
+    <div id="mobile_menu">
+        <div class="x-close"><a href="#" id="x-close-mobmenu"><img src="src/unsorted/img/close.png" alt="Закрыть" /></a></div>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Участники</a></li>
+            <li><a href="#">О проекте</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="buttons"><a href="#" class="button btn-transp">Вход</a>
+        <a id="b-regMob" href="#" class="button">Регистрация</a>
+        </div>
+    </div>
+</div>
+
+<!-- Register form-->
+    <div id="regform">
+        <div class="x-close"><a href="#" id="x-close-form" class="close"><img src="src/unsorted/img/close.png" alt="Закрыть" /></a></div>
+            <div class="content">
+                <h3>Предварительная регистрация</h3>
+                <p class="desc">Сайт находится на стадии разработки. Оставьте свои данные, чтобы получить оповещение, когда проект будет запущен.</p>
+                <input type="text" class="txt" placeholder="Имя">
+                <input type="text" class="txt" placeholder="E-mail">
+                <a href="#" class="button">Отправить</a>
+                <div id="sending">
+                    <img src="src/unsorted/img/loading.gif" alt="loading" width="24">
+                    <p>Отправка</p>
+                </div>
+                <p class="result ok">Данные успешно сохранены</p>
+            </div>
+    </div>
+
+<!-- First Screen-->
+
+<div id="firstscreen" class="container-fluid firstscreen">
+    <header class="container">
+        <div class="row">
+            <div class="col-4 col-lg-3 col-xl-3">
+                <figure class="logo"><a href="#"><img src="src/unsorted/img/logo.svg" width="70" alt="Yogether"></a><figcaption><a href="#">Yogether</a></figcaption></figure>
+            </div>
+            <div class="col-6 d-none d-xl-block d-lg-block">
+                <ul class="topmenu">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Участники</a></li>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-3 login d-none d-xl-block d-lg-block">
+                <a href="#" class="lg">Вход</a>
+                <a id="b-reg" href="#" class="button">Регистрация</a>
+            </div>
+            <div class="col-8 d-block d-lg-none d-xl-none mobile-menu">
+                <a href="#" class="login"><img src="src/unsorted/img/login_mobile.png" alt="login"></a>
+                <a href="#" id="show-mob-menu"><img src="src/unsorted/img/menu_mobile.png" alt="menu" /></a>
+            </div>
+        </div>
+        <div class="row slogan">
+            <div class="col-12 col-lg-9 col-xl-9"><h1>Поиск единомышленников для&nbsp;общения и&nbsp;совместных практик для&nbsp;йогов и&nbsp;эзотериков</h1></div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row buttons">
+            <div class="col-12">
+                <a href="#">Подробнее</a>
+                <a id="b-reg2" href="#" class="register">Регистрация</a>
+            </div>
+        </div>        
+    </header>
+</div>
+
+<!-- Recently registered-->
+
+<div class="container people">
+    <div class="row">
+        <input type="text" placeholder="Введите интересующий вас запрос. Например, йога" class="search" />
+        <h2>Недавно зарегистрировались</h2>
+    </div>
+    <div class="row recent">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
+            <div class="pinkbg">
+                <a href="#"><img src="src/unsorted/img/people/ava1.jpg" alt="Амина Уилсон" class="avatar" /></a>
+                <p class="name"><a href="#">Амина<br>Уилсон</a></p>
+                <p class="about">25 лет, Нью Йорк</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>        
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-end justify-content-lg-center justify-content-xl-center">
+            <div class="pinkbg">
+                <a href="#"><img src="src/unsorted/img/people/ava5.jpg" alt="Татьяна Антонова" class="avatar" /></a>
+                <p class="name"><a href="#">Татьяна<br>Антонова</a></p>
+                <p class="about">27 лет, Новосибирск</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-start justify-content-lg-end justify-content-xl-end">
+            <div class="pinkbg">
+                <a href="#"><img src="src/unsorted/img/people/ava8.jpg" alt="Баи Чжао" class="avatar" /></a>
+                <p class="name"><a href="#">Баи <br>Чжао</a></p>
+                <p class="about">38 лет, Шанхай</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-md-end justify-content-lg-start justify-content-xl-start">
+            <div class="pinkbg">
+                <a href="#"><img src="src/unsorted/img/people/ava4.jpg" alt="Ольга Петрова" class="avatar" /></a>
+                <p class="name"><a href="#">Ольга<br>Петрова</a></p>
+                <p class="about">28 лет, Омск</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>        
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-lg-flex d-xl-flex justify-content-center">
+            <div class="pinkbg">
+                <a href="#"><img src="src/unsorted/img/people/ava7.jpg" alt="Руслан Юсупов" class="avatar" /></a>
+                <p class="name"><a href="#">Руслан<br>Юсупов</p></a>
+                <p class="about">32 года, Пермь</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-lg-flex d-xl-flex justify-content-center justify-content-lg-end justify-content-xl-end">
+            <div class="pinkbg">
+                <a href="#"><img src="src/unsorted/img/people/ava3.jpg" alt="Карина Игнатова" class="avatar" /></a>
+                <p class="name"><a href="#">Карина<br>Игнатова</a></p>
+                <p class="about">23 года, Нижний Новгород</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features-->
+
+<div class="container-fluid features">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Наши преимущества</h2>
+            </div>
+        </div>
+        <div class="row items">
+            <div class="col-12 col-md-5 col-lg-4 col-xl-4">
+                <div class="item simple">
+                    <b>Простая <br />регистрация</b>
+                    <p>Есть над чем задуматься: ключевые особенности структуры проекта, которые представляют собой яркий пример.</p>
+                </div>
+                <div class="item friendly">
+                    <b>Дружелюбные <br />участники</b>
+                    <p>Значимость этих проблем очевидна и сложившаяся структура организации выявляет потребность принимаемых решений.</p>
+                </div>
+                <div class="item clever">
+                    <b>Умные <br />рекомендации</b>
+                    <p>Реплицированные с зарубежных истояников, современные исследования ограничены исключительно образом мышления!</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-4 col-xl-4 d-none d-md-block d-lg-block d-xl-block">&nbsp;</div>
+            <div class="col-12 col-md-5 col-lg-4 col-xl-4">
+                <div class="item private">
+                    <b>Настройки <br />приватности</b>
+                    <p>Противоположная точка зрения подразумевает, что сторонники тоталитаризма в науке ограничены исключительно образом мышления.</p>
+                </div>
+                <div class="item good">
+                    <b>Перемены <br />к лучшему</b>
+                    <p>Для современного мира перспективное планирование прекрасно подходит для реализации приоритизации разума над эмоциями.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row register">
+            <div class="col-12">
+                <p>Регистрируйся и&nbsp;находи<br />единомышленников в&nbsp;своём городе</p>
+                <a href="#" class="button">Регистрация</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Video-->
+
+<div class="container video">
+    <div class="row">
+        <h2>О проекте</h2>
+        <div class="col-12 order-2 order-lg-1 order-xl-1">
+            <p>Для современного мира выбранный нами инновационный путь выявляет срочную потребность как самодостаточных, так и внешне зависимых концептуальных решений. Не следует, однако, забывать, что есть и новая модель развития общества.</p>
+        </div>
+        <div class="col-12 order-1 order-lg-2 order-xl-2">
+            <a href="#"><img src="src/unsorted/img/player.jpg" alt="player" class="player" /></a>
+        </div>
+    </div>
+</div>
+
+<!-- footer-->
+<footer class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm col-md col-lg col-xl d-flex justify-content-center justify-content-xl-start 
+            order-1">
+                <figure class="logo">
+                    <a href="#"><img src="src/unsorted/img/logo.svg" alt="Yogether"></a>
+                    <figcaption><a href="#">Yogether</a></figcaption>
+                </figure>
+            </div>
+            <div class="col-md-12 col-xl-7 d-none d-md-block d-lg-block d-xl-block 
+            order-4 order-xl-2">
+                <div id="menu1" class="menu">
+                    <a href="#">Главная</a>
+                    <a href="#">Участники</a>
+                    <a href="#">О проекте</a>
+                    <a href="#">Встречи</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <div id="menu2" class="menu">
+                    <a href="#">Расписание</a>
+                    <a href="#">Города и страны</a>
+                    <a href="#">Встречи YG</a>
+                    <a href="#">Карта сайта</a>
+                    <a href="#">Наша команда</a>
+                </div>
+            </div>
+            <div class="col-12 col-xl-3 social d-flex justify-content-center justify-content-xl-end order-3 order-xl-3">
+                <a href="#"><img src="src/unsorted/img/social/vk.png" alt="Вконтакте"></a>
+                <a href="#"><img src="src/unsorted/img/social/instagram.png" alt="Инстаграм"></a>
+                <a href="#"><img src="src/unsorted/img/social/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="src/unsorted/img/social/youtube.png" alt="Youtube"></a>
+                <a href="#"><img src="src/unsorted/img/social/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="src/unsorted/img/social/ok.png" alt="Одноклассники"></a>
+            </div>
+            <div class="col-12 d-flex justify-content-center justify-content-xl-start order-2 order-xl-4 desc">
+                Поиск единомышленников для общения и совместных практик для йогов и эзотериков
+            </div>
+            <div class="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-start order-5 copyright">
+                &copy; Yogether. Копирование материалов возможно только с разрешения владельца.
+            </div>
+            <div class="col-12 col-xl-6 privacy d-block d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-xl-end order-6 privacy">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Политика обработки персональных данных</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

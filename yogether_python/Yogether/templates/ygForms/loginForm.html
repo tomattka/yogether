@@ -4,7 +4,7 @@
     <h3 class="login-form__title">Войти</h3>
     {% include "../account/login_form.html" %}
     <div class="login-form__links">
-        <a href="#" class="login-form__link">Восстановление пароля</a>
+        <a href="{% url 'account_reset_password' %}" class="login-form__link">Восстановление пароля</a>
         <a href="{% url 'account_signup' %}" class="login-form__link">Регистрация</a>
     </div>
     {% load socialaccount %}

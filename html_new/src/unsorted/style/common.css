@@ -1,0 +1,311 @@
+/* --------------------------- Common ------------------------------ */
+body{
+    font-family: 'Raleway', sans-serif;
+}
+body, html{
+    height: 100%;
+    min-width: 240px;
+}
+a{
+    transition: 0.2s ease;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 44px;
+    letter-spacing: 0.01em;
+    color: #49497D;
+}
+.button{
+    padding: 14px 32px;
+    background: #7551A8;
+    border-radius: 8px;
+    color: white;
+    margin-right: 0px;
+    line-height: 16px;
+    font-size: 14px;
+}
+.button:hover{
+    background-color: #AB89DB;
+    color: white;
+    text-decoration: none;
+}
+.btn-transp{
+    border: 2px solid #49497D;
+    font-weight: 600;
+    color: #49497D;
+    background: none;
+}
+.btn-transp:hover{
+    text-decoration: none;
+    background-color: #49497D;
+    color: white;
+}
+/* --------------------------- Topmenu ------------------------------ */
+header{
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+    header .topmenu, header .login{
+        margin-top: 23px;
+    }
+        header figure.logo{
+            min-width: 200px;
+        }
+        header figure.logo img{
+            float: left;
+            margin-right: 9px;
+        }
+        header figure.logo figcaption{
+            font-family: 'Barlow', sans-serif;;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 100%;
+            padding-top: 16px;
+        }
+        header .logo a{
+            color: #49497D;
+        }
+        header .logo a:hover{
+            text-decoration: none;
+        }
+        header .topmenu li{
+            display: inline;
+        }
+        header .topmenu a{
+            color: #49497D;
+            margin-right: 28px;
+        }
+    header .login{
+        text-align: right;
+    }
+        header .login a.lg{
+            color: #49497D;
+            margin-right: 18px;
+        }
+        header .login a.button{
+            margin-right: 0px;
+        }
+    header .mobile-menu{
+        text-align: right;
+        margin-top: 12px;
+    }
+    header .mobile-menu a{
+        margin-left: 24px;
+    }
+
+/* ------------------------------  Футер ------------------------------ */
+footer{
+    background-color: rgba(243, 227, 255, 0.75);
+    padding: 40px 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #07071F;
+}
+footer .menu, footer .social{
+    margin-top: 19px;
+}
+footer .menu{
+    margin-bottom: 24px;
+}
+footer .menu a{
+    color: #49497D;
+    margin-right: 24px;
+}
+footer .social a{
+    margin-left: 11px;
+}
+footer .logo{
+    margin-bottom: 24px;
+    width: 114px;
+    text-align: center;
+}
+footer .logo img{
+    margin-bottom: 14px;
+}
+footer .logo figcaption{
+    display: block;
+    font-family: 'Barlow', sans-serif;;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 100%;
+}
+footer .logo a{
+    color: #49497D;
+}
+footer .logo a:hover{
+    text-decoration: none;
+}
+footer .desc{
+    margin-bottom: 40px;
+    letter-spacing: 0.01em;
+}
+footer .copyright{
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+}
+footer .privacy{
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+footer .privacy a{
+    padding-top: 3px;
+    color: #49497D;
+    margin-left: 16px;
+}
+
+/* -------------------------- Popup elements -------------------------------- */
+
+.darkened{  /* затемнение экрана */
+    position: fixed;
+    display: none;
+    background-color: rgba(117, 81, 168, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+.x-close{
+    text-align: right;
+    padding: 16px;
+}
+
+/* ------------------------------  Mobile menu ------------------------------ */
+
+
+#menuroll{ /* оболочка против скроллбара для меню */
+    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#mobile_menu{
+    position: relative;
+    height: 100%;
+    min-height: 550px;
+    width: 228px;
+    left: 100%;
+    background-color: #FDFBFD;
+    z-index: 4;
+    background-image: url("../img/pattern_big.png");
+    background-position: right 56px;
+    background-repeat: no-repeat;
+    padding-bottom: 32px;
+}
+#mobile_menu .x-close{
+    padding-top: 32px;
+}
+#mobile_menu ul{
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 68px;
+}
+#mobile_menu ul li{
+    padding: 0;
+}
+#mobile_menu ul a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 48px;
+    color: #49497D;
+    display: block;
+    width: 100%;
+    height: 48px;
+}
+#mobile_menu ul a:hover{
+    background-color: #F3E3FF;
+}
+#mobile_menu div.buttons{
+    margin-top: 40px;
+}
+#mobile_menu div.buttons a{
+    display: block;
+    margin: auto;
+    margin-bottom: 17px;
+    width: 136px;
+    text-align: center;
+    padding: 14px 24px;
+}
+#mobile_menu div.buttons a.btn-transp{
+    background-color: white;
+}
+#mobile_menu div.buttons a.btn-transp:hover{
+    background-color: #49497D;
+}
+
+/* ------------------------------  Register form ------------------------------ */
+#regform{
+    position: fixed;
+    display: none;
+    width: 400px;
+    background-color: #FDFBFD;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -300px;
+    z-index: 4;
+}
+#regform .content{
+    padding: 30px 30px 60px 30px;
+    text-align: center;
+}
+#regform h3{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#regform p.desc{
+    color: #07071F;
+}
+#regform input.txt{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid rgba(42, 16, 78, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #49497D;
+    outline: none;
+}
+#regform input.txt::placeholder{
+    color: #B7B7D3;
+    font-weight: 500;
+    opacity: 1;
+}
+#regform a.button{
+    display: block;
+    margin: 30px auto;
+    width: 136px;
+}
+#regform #sending{
+    color: #8A8A9E;
+}
+#regform .result.ok{
+        color: #7551A8;
+}
+#regform .result.info{
+        color: sandybrown;
+}
+#regform .result.err{
+        color: red;
+}

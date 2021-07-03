@@ -1,0 +1,253 @@
+/* ------------------------------  Первый экран ------------------------------ */
+.firstscreen{
+    height: 940px;
+    background: url("../img/bg1-w-scroll.jpg") no-repeat;
+    background-position: top center;
+    min-width: 240px;
+}
+    /* Part of styles are in common.css */
+    header .slogan{
+        padding-top: 250px;
+    }
+        header .slogan h1{
+            font-style: normal;
+            font-weight: 800;
+            font-size: 46px;
+            line-height: 140%;
+            letter-spacing: 0.01em;
+            color: #49497D;
+            margin: 0;
+        }
+    header .buttons{
+        margin-top: 50px;
+        margin-left: auto;
+        min-height: 160px;
+        padding-bottom: 160px;
+    }
+        .buttons div{
+            padding: 0px;
+        }
+        header .buttons a{
+            padding: 14px 32px;
+            border: 2px solid #49497D;
+            box-sizing: border-box;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #49497D;
+            margin-right: 24px;
+        }
+        header .buttons a:hover{
+            text-decoration: none;
+            background-color: #49497D;
+            border-color: #49497D;
+            color: white;
+        }
+        header .buttons a.register{
+            background-color: #7551A8;
+            border-color: #7551A8;
+            color: white;
+            margin-right: 0px;
+        }
+        header .buttons a.register:hover{
+            text-decoration: none;
+            background-color: #AB89DB;
+            border-color: #AB89DB;
+        }
+
+/* ------------------------------  Недавно зарегистрировались ------------------------------ */
+
+.people{
+    margin: 19px auto 120px auto;
+}
+    .people input.search{        
+        border: 1px solid rgba(42, 16, 78, 0.2);
+        box-sizing: border-box;
+        box-shadow: 0px 3px 12px -2px rgba(42, 16, 78, 0.15);
+        border-radius: 8px;
+        outline: none;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        width: 100%;
+        padding: 22.5px 22.5px 22.5px 67px;
+
+        background: url("../img/search.png") no-repeat;
+        background-position: 22px 20px;
+        color: #49497D;
+        
+    }
+    .people input.search::placeholder{
+        color: #B7B7D3;
+        font-weight: 500;
+        opacity: 1;
+    }
+    .people h2{
+        margin: 60px auto;
+    }
+    .people div{
+        padding: 0px;
+    }
+    .people .pinkbg{        
+        width: 370px;
+        height: 214px;
+        border-radius: 12px;
+        background: url("../img/pattern.png") no-repeat;
+        background-position: right;
+        background-color: #FDFBFD;
+        padding: 30px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    .people .avatar{
+        border-radius: 80px;
+        float: left;
+        margin-right: 24px;
+        margin-bottom: 30px;
+    }
+    .people .name{
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        color: #49497D;
+    }
+    .people .name a{
+        color: #49497D;
+    }
+    .people .name a:hover{
+        text-decoration: none;
+        color: #AB89DB;
+    }
+    .people .about{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #49497D;
+        height: 43px;
+    }
+    .people .interests{
+        clear: both;
+    }
+    .people .interests a{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #7551A8;
+        padding: 6px 12px;
+        background: #E6D6FD;
+        border-radius: 4px;
+        margin-right: 8px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+    .people .interests a:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #7551A8;
+    }
+
+/* ------------------------------  Преимущества ------------------------------ */
+.features{
+    height: 1192px;
+    background: url("../img/bg-girl.jpg") no-repeat;
+    background-position: top center;
+}
+    .features h2{
+        margin: 105px auto 119px auto;
+    }
+    .features .items{
+        height: 583px;
+    }
+    .features .item{
+        background-repeat: no-repeat;
+        padding-left: 72px;
+        min-height: 147px;
+        margin-bottom: 32px;
+    }
+        .features .item b{
+            display: block;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+            color: #49497D;
+            margin-bottom: 16px;
+        }
+        .features .item p{
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+            color: #07071F;
+            width: 237px;
+        }
+        
+        .features .item.simple{
+            background-image: url("../img/simple.png");
+        }
+        .features .item.friendly{
+            background-image: url("../img/friendly.png");
+        }
+        .features .item.clever{
+            background-image: url("../img/clever.png");
+        }
+        .features .item.private{
+            background-image: url("../img/private.png");
+        }
+        .features .item.good{
+            background-image: url("../img/good.png");
+        }
+        .features .register{
+            margin-top: 46px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 120%;
+            letter-spacing: 0.01em;
+            color: #49497D;
+
+        }
+        .features .register p{
+            margin-bottom: 40px;
+        }
+        .features .register a.button{
+            margin-top: 40px;
+            padding: 14px 32px;
+            background: #7551A8;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            color: white;
+        }
+        .features .register a.button:hover{
+            text-decoration: none;
+            background-color: #AB89DB;
+        }
+
+        
+/* ------------------------------  Видео ------------------------------ */
+.video{
+    text-align: center;
+    margin: 120px auto 200px auto;
+    max-width: 970px;
+}
+.video h2{
+    margin-bottom: 60px;
+}
+.video p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #07071F;
+    margin-bottom: 40px;
+}
+.video .player{
+    max-width: 970px;
+    width: 100%;
+}
+
+
+
