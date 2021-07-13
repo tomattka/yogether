@@ -8,34 +8,6 @@
     }
  }
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-    /* Футер */
-    footer .copyright{
-        white-space: normal;
-    }    
-    footer .menu{
-        text-align: center;
-        margin-bottom: 0px;
-        margin-top: 10px;
-    }
-    footer .logo{
-        margin-top: 10px;
-    }
-    footer .desc{
-        margin-bottom: 10px;
-    }
-    footer .social{
-        margin-bottom: 30px;
-    }
-        footer .social a{
-            margin: auto 5.5px;
-        }
-    footer .copyright{
-        margin-top: 40px;
-        margin-bottom: 15px;
-    }
-}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -51,37 +23,6 @@
 @media only screen and (max-width: 767px) {
     h2{
         font-size: 28px;
-    }
-    /* ------------- Футер 481-767 ------------- */
-    footer{
-        padding-bottom: 25px;
-        text-align: center;
-    }
-    footer .logo{
-        margin-top: 0px;
-    }
-    footer .desc{
-        margin-bottom: 24px;
-        line-height: 140%;
-    }
-    footer .desc, footer .copyright, footer .privacy{        
-        padding: 0;
-    }
-    footer .social{
-        margin-top: 0px;
-        margin-bottom: 24px;
-    }
-    footer .copyright{
-        margin-top: 0px;
-        margin-bottom: 40px;
-        line-height: 140%;
-        font-feature-settings: 'pnum' on, 'lnum' on;
-        font-weight: normal;
-    }
-    footer .privacy a{
-        display: block;
-        margin-left: 0px;
-        margin-bottom: 15px;
     }
 }
 

@@ -6,31 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="src/unsorted/bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/bootstrap-4.5.2-dist/css/bootstrap.css">
 	
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
+    <!-- Fonts -->    
+    <link rel="stylesheet" href="css/common/fonts.css">    
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="src/unsorted/style/index.css">
-    <link rel="stylesheet" href="src/unsorted/style/common.css">
-    <link rel="stylesheet" href="src/unsorted/style/index_media.css">	
-    <link rel="stylesheet" href="src/unsorted/style/common_media.css">	
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/content/index.css">    
+    <link rel="stylesheet" href="css/common/footer.css">	
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">
 
     <!-- Scripts -->
-    <script src="src/unsorted/jquery/jquery-3.5.1.js"></script>
-    <script src="src/unsorted/js/main.js"></script>
+    <script src="src/common/jquery-3.6.0.min.js"></script>
+    <script src="src/index/main.js"></script>
 </head>
 <body>
-
 
 <!-- Dark Screen and Menu-->
 <div id="darkened" class="darkened"></div>
 <div id="menuroll">    
     <div id="darkened_menu" class="darkened"></div>
     <div id="mobile_menu">
-        <div class="x-close"><a href="#" id="x-close-mobmenu"><img src="src/unsorted/img/close.png" alt="Закрыть" /></a></div>
+        <div class="x-close"><a href="#" id="x-close-mobmenu"><img src="src/index/img/close.png" alt="Закрыть" /></a></div>
         <ul>
             <li><a href="#">Главная</a></li>
             <li><a href="#">Участники</a></li>
@@ -45,7 +44,7 @@
 
 <!-- Register form-->
     <div id="regform">
-        <div class="x-close"><a href="#" id="x-close-form" class="close"><img src="src/unsorted/img/close.png" alt="Закрыть" /></a></div>
+        <div class="x-close"><a href="#" id="x-close-form" class="close"><img src="src/index/img/close.png" alt="Закрыть" /></a></div>
             <div class="content">
                 <h3>Предварительная регистрация</h3>
                 <p class="desc">Сайт находится на стадии разработки. Оставьте свои данные, чтобы получить оповещение, когда проект будет запущен.</p>
@@ -53,7 +52,7 @@
                 <input type="text" class="txt" placeholder="E-mail">
                 <a href="#" class="button">Отправить</a>
                 <div id="sending">
-                    <img src="src/unsorted/img/loading.gif" alt="loading" width="24">
+                    <img src="src/index/img/loading.gif" alt="loading" width="24">
                     <p>Отправка</p>
                 </div>
                 <p class="result ok">Данные успешно сохранены</p>
@@ -66,7 +65,7 @@
     <header class="container">
         <div class="row">
             <div class="col-4 col-lg-3 col-xl-3">
-                <figure class="logo"><a href="#"><img src="src/unsorted/img/logo.svg" width="70" alt="Yogether"></a><figcaption><a href="#">Yogether</a></figcaption></figure>
+                <figure class="logo"><a href="#"><img src="src/index/img/logo.svg" width="70" alt="Yogether"></a><figcaption><a href="#">Yogether</a></figcaption></figure>
             </div>
             <div class="col-6 d-none d-xl-block d-lg-block">
                 <ul class="topmenu">
@@ -81,8 +80,8 @@
                 <a id="b-reg" href="#" class="button">Регистрация</a>
             </div>
             <div class="col-8 d-block d-lg-none d-xl-none mobile-menu">
-                <a href="#" class="login"><img src="src/unsorted/img/login_mobile.png" alt="login"></a>
-                <a href="#" id="show-mob-menu"><img src="src/unsorted/img/menu_mobile.png" alt="menu" /></a>
+                <a href="#" class="login"><img src="src/index/img/login_mobile.png" alt="login"></a>
+                <a href="#" id="show-mob-menu"><img src="src/index/img/menu_mobile.png" alt="menu" /></a>
             </div>
         </div>
         <div class="row slogan">
@@ -108,7 +107,7 @@
     <div class="row recent">
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
             <div class="pinkbg">
-                <a href="#"><img src="src/unsorted/img/people/ava1.jpg" alt="Амина Уилсон" class="avatar" /></a>
+                <a href="#"><img src="src/index/img/people/ava1.jpg" alt="Амина Уилсон" class="avatar" /></a>
                 <p class="name"><a href="#">Амина<br>Уилсон</a></p>
                 <p class="about">25 лет, Нью Йорк</p>
                 <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
@@ -116,7 +115,7 @@
         </div>        
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-end justify-content-lg-center justify-content-xl-center">
             <div class="pinkbg">
-                <a href="#"><img src="src/unsorted/img/people/ava5.jpg" alt="Татьяна Антонова" class="avatar" /></a>
+                <a href="#"><img src="src/index/img/people/ava5.jpg" alt="Татьяна Антонова" class="avatar" /></a>
                 <p class="name"><a href="#">Татьяна<br>Антонова</a></p>
                 <p class="about">27 лет, Новосибирск</p>
                 <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
@@ -124,7 +123,7 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-start justify-content-lg-end justify-content-xl-end">
             <div class="pinkbg">
-                <a href="#"><img src="src/unsorted/img/people/ava8.jpg" alt="Баи Чжао" class="avatar" /></a>
+                <a href="#"><img src="src/index/img/people/ava8.jpg" alt="Баи Чжао" class="avatar" /></a>
                 <p class="name"><a href="#">Баи <br>Чжао</a></p>
                 <p class="about">38 лет, Шанхай</p>
                 <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
@@ -132,7 +131,7 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-md-end justify-content-lg-start justify-content-xl-start">
             <div class="pinkbg">
-                <a href="#"><img src="src/unsorted/img/people/ava4.jpg" alt="Ольга Петрова" class="avatar" /></a>
+                <a href="#"><img src="src/index/img/people/ava4.jpg" alt="Ольга Петрова" class="avatar" /></a>
                 <p class="name"><a href="#">Ольга<br>Петрова</a></p>
                 <p class="about">28 лет, Омск</p>
                 <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
@@ -140,7 +139,7 @@
         </div>        
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-lg-flex d-xl-flex justify-content-center">
             <div class="pinkbg">
-                <a href="#"><img src="src/unsorted/img/people/ava7.jpg" alt="Руслан Юсупов" class="avatar" /></a>
+                <a href="#"><img src="src/index/img/people/ava7.jpg" alt="Руслан Юсупов" class="avatar" /></a>
                 <p class="name"><a href="#">Руслан<br>Юсупов</p></a>
                 <p class="about">32 года, Пермь</p>
                 <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
@@ -148,7 +147,7 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-lg-flex d-xl-flex justify-content-center justify-content-lg-end justify-content-xl-end">
             <div class="pinkbg">
-                <a href="#"><img src="src/unsorted/img/people/ava3.jpg" alt="Карина Игнатова" class="avatar" /></a>
+                <a href="#"><img src="src/index/img/people/ava3.jpg" alt="Карина Игнатова" class="avatar" /></a>
                 <p class="name"><a href="#">Карина<br>Игнатова</a></p>
                 <p class="about">23 года, Нижний Новгород</p>
                 <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
@@ -213,61 +212,53 @@
             <p>Для современного мира выбранный нами инновационный путь выявляет срочную потребность как самодостаточных, так и внешне зависимых концептуальных решений. Не следует, однако, забывать, что есть и новая модель развития общества.</p>
         </div>
         <div class="col-12 order-1 order-lg-2 order-xl-2">
-            <a href="#"><img src="src/unsorted/img/player.jpg" alt="player" class="player" /></a>
+            <a href="#"><img src="src/index/img/player.jpg" alt="player" class="player" /></a>
         </div>
     </div>
 </div>
 
-<!-- footer-->
-<footer class="container-fluid footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm col-md col-lg col-xl d-flex justify-content-center justify-content-xl-start 
-            order-1">
-                <figure class="logo">
-                    <a href="#"><img src="src/unsorted/img/logo.svg" alt="Yogether"></a>
-                    <figcaption><a href="#">Yogether</a></figcaption>
-                </figure>
-            </div>
-            <div class="col-md-12 col-xl-7 d-none d-md-block d-lg-block d-xl-block 
-            order-4 order-xl-2">
-                <div id="menu1" class="menu">
-                    <a href="#">Главная</a>
-                    <a href="#">Участники</a>
-                    <a href="#">О проекте</a>
-                    <a href="#">Встречи</a>
-                    <a href="#">Контакты</a>
-                </div>
-                <div id="menu2" class="menu">
-                    <a href="#">Расписание</a>
-                    <a href="#">Города и страны</a>
-                    <a href="#">Встречи YG</a>
-                    <a href="#">Карта сайта</a>
-                    <a href="#">Наша команда</a>
-                </div>
-            </div>
-            <div class="col-12 col-xl-3 social d-flex justify-content-center justify-content-xl-end order-3 order-xl-3">
-                <a href="#"><img src="src/unsorted/img/social/vk.png" alt="Вконтакте"></a>
-                <a href="#"><img src="src/unsorted/img/social/instagram.png" alt="Инстаграм"></a>
-                <a href="#"><img src="src/unsorted/img/social/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="src/unsorted/img/social/youtube.png" alt="Youtube"></a>
-                <a href="#"><img src="src/unsorted/img/social/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="src/unsorted/img/social/ok.png" alt="Одноклассники"></a>
-            </div>
-            <div class="col-12 d-flex justify-content-center justify-content-xl-start order-2 order-xl-4 desc">
-                Поиск единомышленников для общения и совместных практик для йогов и эзотериков
-            </div>
-            <div class="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-start order-5 copyright">
-                &copy; Yogether. Копирование материалов возможно только с разрешения владельца.
-            </div>
-            <div class="col-12 col-xl-6 privacy d-block d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-xl-end order-6 privacy">
-                <a href="#">Политика конфиденциальности</a>
-                <a href="#">Политика обработки персональных данных</a>
-            </div>
-        </div>
+<!-- Footer start -->
 
+<footer class="footer">
+    <div class="footer__wrapper">
+        <figure class="footer__logo">
+            <a href="#"><img class="footer__logo-img" src="src/footer/img/logo.svg" width="70" alt="Yogether"></a>
+            <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
+        </figure>
+        <div class="footer__menus">
+            <ul class="footer__menu footer__menu_first">
+                <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Встречи</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
+            </ul>
+            <ul class="footer__menu">
+                <li class="footer__menu-item"><a class="footer__link" href="#">Расписание</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Города и страны</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Встречи YG</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Карта сайта</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Наша команда</a></li>
+            </ul>
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__soc-link"><img src="src/footer/img/vk.png" alt="Вконтакте"></a>
+            <a href="#" class="footer__soc-link"><img src="src/footer/img/instagram.png" alt="Инстаграм"></a>
+            <a href="#" class="footer__soc-link"><img src="src/footer/img/facebook.png" alt="Facebook"></a>
+            <a href="#" class="footer__soc-link"><img src="src/footer/img/youtube.png" alt="Youtube"></a>
+            <a href="#" class="footer__soc-link"><img src="src/footer/img/twitter.png" alt="Twitter"></a>
+            <a href="#" class="footer__soc-link"><img src="src/footer/img/ok.png" alt="Одноклассники"></a>
+        </div>
+        <div class="footer__desc">Поиск единомышленников для общения и совместных практик для йогов и эзотериков</div>
+        <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
+        <div class="footer__policy">
+            <a href="#" class="footer__link footer__policy-link">Политика конфиденциальности</a>
+            <a href="#" class="footer__link footer__policy-link">Политика обработки персональных данных</a>
+        </div>
     </div>
 </footer>
+
+<!-- Footer end -->
 
 </body>
 </html>

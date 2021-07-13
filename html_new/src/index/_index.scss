@@ -1,7 +1,7 @@
 /* ------------------------------  Первый экран ------------------------------ */
 .firstscreen{
     height: 940px;
-    background: url("../img/bg1-w-scroll.jpg") no-repeat;
+    background: url("../../src/index/img/bg1-w-scroll.jpg") no-repeat;
     background-position: top center;
     min-width: 240px;
 }
@@ -72,7 +72,7 @@
         width: 100%;
         padding: 22.5px 22.5px 22.5px 67px;
 
-        background: url("../img/search.png") no-repeat;
+        background: url("../../src/index/img/search.png") no-repeat;
         background-position: 22px 20px;
         color: #49497D;
         
@@ -92,7 +92,7 @@
         width: 370px;
         height: 214px;
         border-radius: 12px;
-        background: url("../img/pattern.png") no-repeat;
+        background: url("../../src/index/img/pattern.png") no-repeat;
         background-position: right;
         background-color: #FDFBFD;
         padding: 30px;
@@ -150,7 +150,7 @@
 /* ------------------------------  Преимущества ------------------------------ */
 .features{
     height: 1192px;
-    background: url("../img/bg-girl.jpg") no-repeat;
+    background: url("../../src/index/img/bg-girl.jpg") no-repeat;
     background-position: top center;
 }
     .features h2{
@@ -184,19 +184,19 @@
         }
         
         .features .item.simple{
-            background-image: url("../img/simple.png");
+            background-image: url("../../src/index/img/simple.png");
         }
         .features .item.friendly{
-            background-image: url("../img/friendly.png");
+            background-image: url("../../src/index/img/friendly.png");
         }
         .features .item.clever{
-            background-image: url("../img/clever.png");
+            background-image: url("../../src/index/img/clever.png");
         }
         .features .item.private{
-            background-image: url("../img/private.png");
+            background-image: url("../../src/index/img/private.png");
         }
         .features .item.good{
-            background-image: url("../img/good.png");
+            background-image: url("../../src/index/img/good.png");
         }
         .features .register{
             margin-top: 46px;

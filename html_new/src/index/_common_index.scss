@@ -99,70 +99,6 @@ header{
         margin-left: 24px;
     }
 
-/* ------------------------------  Футер ------------------------------ */
-footer{
-    background-color: rgba(243, 227, 255, 0.75);
-    padding: 40px 0px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    color: #07071F;
-}
-footer .menu, footer .social{
-    margin-top: 19px;
-}
-footer .menu{
-    margin-bottom: 24px;
-}
-footer .menu a{
-    color: #49497D;
-    margin-right: 24px;
-}
-footer .social a{
-    margin-left: 11px;
-}
-footer .logo{
-    margin-bottom: 24px;
-    width: 114px;
-    text-align: center;
-}
-footer .logo img{
-    margin-bottom: 14px;
-}
-footer .logo figcaption{
-    display: block;
-    font-family: 'Barlow', sans-serif;;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 100%;
-}
-footer .logo a{
-    color: #49497D;
-}
-footer .logo a:hover{
-    text-decoration: none;
-}
-footer .desc{
-    margin-bottom: 40px;
-    letter-spacing: 0.01em;
-}
-footer .copyright{
-    white-space: nowrap;
-    letter-spacing: 0.01em;
-}
-footer .privacy{
-    font-size: 13px;
-    line-height: 100%;
-    letter-spacing: 0.01em;
-    font-feature-settings: 'pnum' on, 'lnum' on;
-}
-footer .privacy a{
-    padding-top: 3px;
-    color: #49497D;
-    margin-left: 16px;
-}
-
 /* -------------------------- Popup elements -------------------------------- */
 
 .darkened{  /* затемнение экрана */
@@ -198,7 +134,7 @@ footer .privacy a{
     left: 100%;
     background-color: #FDFBFD;
     z-index: 4;
-    background-image: url("../img/pattern_big.png");
+    background-image: url("../../src/index/img/pattern_big.png");
     background-position: right 56px;
     background-repeat: no-repeat;
     padding-bottom: 32px;
