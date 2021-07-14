@@ -145,7 +145,7 @@ h1, h2 {
 /* Header */
 .header {
   height: 453px;
-  background-image: url("header/img/mountains_bg.jpg");
+  background-image: url("../../src/header/img/mountains_bg.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -161,7 +161,7 @@ h1, h2 {
   .header {
     height: 300px;
     background-position: bottom center;
-    background-image: url("header//img/mountains_bg_mob.jpg");
+    background-image: url("../../src/header/img/mountains_bg_mob.jpg");
     background-size: 100% auto;
   }
 }
@@ -379,7 +379,7 @@ h1, h2 {
   margin: 0 6px 0px 8px;
   width: 6px;
   height: 16px;
-  background: url("header/img/bc_arrow.svg") no-repeat;
+  background: url("../../src/header/img/bc_arrow.svg") no-repeat;
   background-position: center bottom;
 }
 
@@ -892,7 +892,7 @@ h1, h2 {
 }
 
 .darkscreen {
-  display: block;
+  display: none;
   position: fixed;
   background-color: rgba(117, 81, 168, 0.5);
   width: 100%;
@@ -901,9 +901,7 @@ h1, h2 {
 }
 
 .popups {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: fixed;
   overflow-x: hidden;
   width: 100%;
@@ -1000,7 +998,6 @@ h1, h2 {
   text-align: center;
   background-color: #FDFBFD;
   border-radius: 8px;
-  display: block;
 }
 
 @media (max-width: 768px) {

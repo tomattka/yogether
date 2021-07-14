@@ -1,0 +1,243 @@
+/* Variables */
+/* Variables */
+/* Header */
+.header {
+  height: 453px;
+  background-image: url("../../src/header/img/mountains_bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    background-size: 1500px auto;
+    height: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 300px;
+    background-position: bottom center;
+    background-image: url("../../src/header/img/mountains_bg_mob.jpg");
+    background-size: 100% auto;
+  }
+}
+
+.header__wrapper {
+  width: 1170px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .header__wrapper {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.header__title {
+  margin-top: 110px;
+}
+
+@media (max-width: 1024px) {
+  .header__title {
+    margin-top: 56px;
+  }
+}
+
+/* Menu top line */
+.menu-block {
+  height: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu-block__link {
+  color: #49497D;
+}
+
+.menu-block__logo {
+  margin: 0;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  margin-right: 107px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 480px) {
+  .menu-block__logo {
+    margin-right: 0;
+  }
+}
+
+.menu-block__logo-img {
+  margin-right: 9px;
+}
+
+@media (max-width: 480px) {
+  .menu-block__logo-img {
+    width: 52px;
+    margin-right: 8px;
+  }
+}
+
+.menu-block__logo-figcaption {
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 100%;
+}
+
+@media (max-width: 480px) {
+  .menu-block__logo-figcaption {
+    font-size: 18px;
+  }
+}
+
+.menu-block__logo-link:hover {
+  text-decoration: none;
+}
+
+.menu-block__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 615px;
+      flex-basis: 615px;
+  list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .menu-block__menu {
+    display: none;
+  }
+}
+
+.menu-block__item {
+  display: block;
+  margin-right: 28px;
+  white-space: nowrap;
+}
+
+.menu-block__buttons {
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .menu-block__buttons {
+    display: none;
+  }
+}
+
+.menu-block__mobile-buttons {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .menu-block__mobile-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.menu-block__mob-bt-link {
+  margin-left: 24px;
+}
+
+.menu-block__register {
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+/* Title */
+.title {
+  text-align: center;
+}
+
+.title__h1, .title__h2 {
+  margin-bottom: 31px;
+}
+
+@media (max-width: 1024px) {
+  .title__h1, .title__h2 {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title__h1, .title__h2 {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title__h1, .title__h2 {
+    line-height: 120%;
+  }
+}
+
+.title__breadcrumbs {
+  font-size: 14px;
+  height: 16px;
+  line-height: 16px;
+}
+
+@media (max-width: 480px) {
+  .title__breadcrumbs {
+    display: none;
+  }
+}
+
+.title__link {
+  color: #49497D;
+}
+
+.title__link::after {
+  content: "";
+  display: inline-block;
+  margin: 0 6px 0px 8px;
+  width: 6px;
+  height: 16px;
+  background: url("../../src/header/img/bc_arrow.svg") no-repeat;
+  background-position: center bottom;
+}
+/*# sourceMappingURL=header.css.map */

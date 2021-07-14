@@ -1,6 +1,6 @@
 /* Variables */
 .darkscreen {
-  display: block;
+  display: none;
   position: fixed;
   background-color: rgba(117, 81, 168, 0.5);
   width: 100%;
@@ -9,9 +9,7 @@
 }
 
 .popups {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: fixed;
   overflow-x: hidden;
   width: 100%;
@@ -108,7 +106,6 @@
   text-align: center;
   background-color: #FDFBFD;
   border-radius: 8px;
-  display: block;
 }
 
 @media (max-width: 768px) {
